@@ -243,9 +243,15 @@ async function startGame(section, term) {
 function renderHints() {
   const list = $('hints-list');
   list.innerHTML = '';
-  for (let i = 0; i < state.hintsShown; i++) {
+  // Always render exactly 5 hints
+  for (let i = 0; i < 5; i++) {
     const li = document.createElement('li');
-    li.textContent = currentTerm.hints[i];
+    if (i < state.hintsShown) {
+      li.textContent = currentTerm.hints[i];
+    } else {
+      li.textContent = '🔒 Locked — Guess to reveal';
+      li.classList.add('locked-hint');
+    }
     list.appendChild(li);
   }
 }
@@ -270,12 +276,38 @@ $('search-input').addEventListener('input', (e) => {
     div.textContent = t.answer;
     const already = state.guesses.includes(t.answer);
     if (already) div.classList.add('guessed');
-    if (!already) div.onclick = () => submitGuess(t.answer);
+    if (!already) div.onclick = () => {
+      $('search-input').value = t.answer;
+      results.innerHTML = ''; // hide dropdown after selecting
+      $('search-input').focus();
+    };
     results.appendChild(div);
   });
 });
 
 // --- Guess handling ---
+$('submit-guess-btn').addEventListener('click', () => {
+  const val = $('search-input').value.trim();
+  if (!val) return;
+  // Ensure it's a valid term from the bank
+  const isValid = currentBank.some(t => t.answer.toLowerCase() === val.toLowerCase());
+  if (!isValid) {
+    alert("Not in word list");
+    return;
+  }
+  // Find the canonical casing
+  const canonicalAnswer = currentBank.find(t => t.answer.toLowerCase() === val.toLowerCase()).answer;
+  submitGuess(canonicalAnswer);
+});
+
+// Allow hitting Enter in the input to submit
+$('search-input').addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    $('submit-guess-btn').click();
+  }
+});
+
 function submitGuess(answer) {
   if (state.solved || state.givenUp) return;
   if (state.guesses.includes(answer)) return;

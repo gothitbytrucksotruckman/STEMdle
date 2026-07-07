@@ -1,14 +1,17 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #f4f4f8;
+  --bg: #f0f8ff; /* Light, bright blue background */
   --card: #ffffff;
-  --text: #1a1a2e;
-  --muted: #666;
-  --accent: #2d6a4f;
-  --danger: #c1121f;
-  --border: #ddd;
-  --hint: #e9ecef;
+  --text: #1a365d; /* Dark navy for contrast */
+  --muted: #5c7c99; /* Softer blue-grey */
+  --accent: #0077b6; /* Vibrant blue accent */
+  --accent-hover: #005f92;
+  --danger: #e63946;
+  --border: #bde0fe; /* Very light blue border */
+  --hint: #e0f2fe; /* Light blue hint box */
+  --header-bg: #0077b6; /* Solid blue header */
+  --header-text: #ffffff;
 }
 
 body {
@@ -16,20 +19,42 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--card);
-  border-bottom: 1px solid var(--border);
+  background: var(--header-bg);
+  color: var(--header-text);
   text-align: center;
-  padding: 0.75rem 1rem 0.6rem;
-  margin: 0 -1rem 1.5rem;
+  padding: 1rem 1rem 0.8rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+header .tagline {
+  color: #caf0f8; /* Soft blue text inside header */
+}
+
+footer {
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 2rem;
 }
 
 h1 {
@@ -57,11 +82,11 @@ h1 {
 }
 
 #section-buttons {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 0.75rem;
   margin-top: 1.5rem;
-  max-width: 480px;
+  max-width: 320px; /* slightly narrower for a single column */
   margin-left: auto;
   margin-right: auto;
 }
@@ -69,17 +94,20 @@ h1 {
 #section-buttons button {
   padding: 1rem;
   font-size: 1rem;
+  font-weight: 600;
   background: var(--card);
-  color: var(--text);
-  border: 2px solid var(--border);
+  color: var(--accent);
+  border: 2px solid var(--accent);
   border-radius: 8px;
   cursor: pointer;
-  transition: border-color 0.15s, transform 0.1s;
+  transition: border-color 0.15s, transform 0.1s, background-color 0.15s;
 }
 
 #section-buttons button:hover {
-  border-color: var(--accent);
+  background: var(--accent);
+  color: white;
   transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 119, 182, 0.2);
 }
 
 #levels-list {
@@ -116,6 +144,7 @@ h1 {
 
 .level-btn:hover {
   border-color: var(--accent);
+  background: var(--hint);
   color: var(--accent);
 }
 
@@ -137,7 +166,21 @@ h1 {
   border: none;
   color: var(--accent);
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.link-btn:hover { text-decoration: underline; }
+
+/* In the header, link buttons should be white to contrast with blue bg */
+header .link-btn {
+  color: var(--header-text);
+  background: rgba(255,255,255,0.15);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+header .link-btn:hover {
+  background: rgba(255,255,255,0.25);
+  text-decoration: none;
 }
 
 section {
@@ -162,6 +205,14 @@ section {
   animation: slideDown 0.3s ease-out;
 }
 
+#hints-list li.locked-hint {
+  background: var(--bg);
+  color: var(--muted);
+  border: 1px dashed var(--border);
+  font-style: italic;
+  opacity: 0.7;
+}
+
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -183,16 +234,31 @@ section {
   margin-right: 0.5rem;
 }
 
+#hints-list li.locked-hint::before {
+  background: var(--muted);
+}
+
 #hints-list { counter-reset: item; }
 
+.search-input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
 #search-input {
-  width: 100%;
+  flex: 1;
   padding: 0.75rem;
   font-size: 1rem;
   border: 2px solid var(--border);
   border-radius: 8px;
   background: var(--bg);
   color: var(--text);
+}
+
+#submit-guess-btn {
+  padding: 0.75rem 1.25rem;
+  /* Override accent-btn defaults to match input height exactly */
+  margin: 0;
 }
 
 #search-input:focus {
@@ -310,15 +376,22 @@ section {
   border-radius: 8px;
   cursor: pointer;
 }
+.accent-btn:hover {
+  background: var(--accent-hover);
+}
 
 .outline-btn {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  background: transparent;
-  color: var(--text);
-  border: 2px solid var(--border);
+  background: var(--card);
+  color: var(--accent);
+  border: 2px solid var(--accent);
   border-radius: 8px;
   cursor: pointer;
+  font-weight: 600;
+}
+.outline-btn:hover {
+  background: var(--hint);
 }
 
 .toast {

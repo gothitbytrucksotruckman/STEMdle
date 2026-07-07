@@ -4,9 +4,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve public directory at the root
-app.use(express.static(path.join(__dirname, 'public')));
-// Serve data directory
-app.use('/data', express.static(path.join(__dirname, 'data')));
+// Serve files from the root directory (where index.html now lives)
+app.use(express.static(__dirname));
 
 app.listen(PORT, () => console.log(`STEMdle running on http://localhost:${PORT}`));

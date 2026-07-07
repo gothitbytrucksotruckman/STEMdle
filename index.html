@@ -43,7 +43,10 @@
     </section>
 
     <section id="search-area">
-      <input type="text" id="search-input" placeholder="Type to search terms..." autocomplete="off">
+      <div class="search-input-group">
+        <input type="text" id="search-input" placeholder="Type to search terms..." autocomplete="off">
+        <button id="submit-guess-btn" class="accent-btn">Submit</button>
+      </div>
       <div id="search-results"></div>
       <button id="give-up-btn" class="danger-btn">Give Up</button>
     </section>
@@ -74,6 +77,10 @@
     </div>
     <div id="stats-content"></div>
   </main>
+
+  <footer>
+    <p>STEMdle &copy; 2026. A daily engineering & CS term guessing game.</p>
+  </footer>
 
   <div id="toast" class="toast hidden">Copied to clipboard</div>
 

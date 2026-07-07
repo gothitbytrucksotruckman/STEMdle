@@ -1,0 +1,365 @@
+{
+  "section": "civil",
+  "terms": [
+    {
+      "number": 1,
+      "answer": "Shear Force",
+      "searchTags": ["shear force", "shear", "transverse force"],
+      "hints": [
+        "An internal force acting perpendicular to the longitudinal axis of a structural member",
+        "Causes one part of a beam to slide relative to an adjacent part",
+        "Visualised in a shear force diagram alongside the bending moment diagram",
+        "Maximum value usually occurs at supports or point loads",
+        "Paired with bending moment to fully describe the internal state of a loaded beam"
+      ]
+    },
+    {
+      "number": 2,
+      "answer": "Rebar",
+      "searchTags": ["rebar", "reinforcing bar", "reinforcement", "steel bar"],
+      "hints": [
+        "Steel bars embedded in concrete to give it tensile strength",
+        "Concrete is strong in compression but weak in tension — this fixes the weakness",
+        "The ridged surface (deformations) helps it bond to the surrounding concrete",
+        "Corrosion of this element is the leading cause of concrete structure deterioration",
+        "Short for reinforcing bar; the combination of it and concrete is called reinforced concrete (RC)"
+      ]
+    },
+    {
+      "number": 3,
+      "answer": "Foundation",
+      "searchTags": ["foundation", "footing", "deep foundation", "shallow foundation"],
+      "hints": [
+        "The structural element that transfers loads from a building into the ground",
+        "Its design depends on soil bearing capacity and the loads above",
+        "Two broad categories: shallow (spread footings, mats) and deep (piles, caissons)",
+        "Getting it wrong is catastrophic — it's one of the hardest things to fix after construction",
+        "The Leaning Tower of Pisa's tilt is a famous example of inadequate soil investigation before construction"
+      ]
+    },
+    {
+      "number": 4,
+      "answer": "Bending Moment",
+      "searchTags": ["bending moment", "moment", "flexure"],
+      "hints": [
+        "The internal tendency of a structural element to bend under load",
+        "The companion to shear force in beam analysis",
+        "Causes tension on one face of a beam and compression on the other",
+        "Maximum value in a simply supported beam with a central point load is at midspan",
+        "Formula: M = F × d, where F is force and d is the perpendicular distance"
+      ]
+    },
+    {
+      "number": 5,
+      "answer": "Truss",
+      "searchTags": ["truss", "roof truss", "bridge truss", "warren truss"],
+      "hints": [
+        "A structural framework made of triangular units",
+        "The triangle is used because it's the only shape that can't be deformed without changing member lengths",
+        "Members carry only axial forces (tension or compression) — no bending",
+        "Used in bridges, roof structures, and tower cranes",
+        "Common configurations include Pratt, Warren, and Howe trusses"
+      ]
+    },
+    {
+      "number": 6,
+      "answer": "Concrete",
+      "searchTags": ["concrete", "cement", "reinforced concrete"],
+      "hints": [
+        "The most widely used construction material in the world",
+        "Made from cement, water, sand, and aggregate (gravel or crushed rock)",
+        "Strong in compression, weak in tension — often reinforced with steel to compensate",
+        "Sets through a chemical hydration reaction, not by drying",
+        "Water-to-cement ratio is the single most important factor controlling its strength"
+      ]
+    },
+    {
+      "number": 7,
+      "answer": "Bearing Capacity",
+      "searchTags": ["bearing capacity", "soil bearing capacity", "allowable bearing pressure"],
+      "hints": [
+        "The maximum load per unit area that a soil can support before failure",
+        "A key parameter in foundation design",
+        "Depends on soil type, density, water content, and depth of the foundation",
+        "Exceeding it causes settlement or sudden shear failure — the ground collapses under the structure",
+        "Determined by in-situ tests (SPT, CPT) or laboratory testing of soil samples"
+      ]
+    },
+    {
+      "number": 8,
+      "answer": "Retaining Wall",
+      "searchTags": ["retaining wall", "earth retaining", "gravity wall"],
+      "hints": [
+        "A structure that holds back soil or other material against a height difference",
+        "Found wherever roads are cut into hillsides, in basements, and along waterways",
+        "Must resist lateral earth pressure, hydrostatic pressure, and sometimes surcharge loads",
+        "Types include gravity, cantilever, sheet pile, and anchored walls",
+        "Drainage behind it is critical — water pressure is often more dangerous than soil pressure"
+      ]
+    },
+    {
+      "number": 9,
+      "answer": "Settlement",
+      "searchTags": ["settlement", "differential settlement", "consolidation settlement"],
+      "hints": [
+        "The downward movement of a structure as the ground compresses under load",
+        "Some is expected — it becomes a problem when it's uneven or excessive",
+        "Differential settlement is more damaging than uniform settlement — it tilts and cracks structures",
+        "Can occur immediately (elastic) or over years (consolidation in clay soils)",
+        "The Millennium Tower in San Francisco is a well-known modern example of excessive post-construction settlement"
+      ]
+    },
+    {
+      "number": 10,
+      "answer": "Load-Bearing Wall",
+      "searchTags": ["load bearing wall", "structural wall", "bearing wall"],
+      "hints": [
+        "A wall that carries loads from floors and roofs above down to the foundation",
+        "Removing one without proper support can cause partial or total collapse",
+        "Distinguished from partition walls, which only divide space and carry no structural load",
+        "Common in masonry and older construction; modern steel and concrete frames rely on columns instead",
+        "Engineers identify them by checking whether they sit on beams or foundations and carry floor joists above"
+      ]
+    },
+    {
+      "number": 11,
+      "answer": "Compaction",
+      "searchTags": ["compaction", "soil compaction", "proctor compaction"],
+      "hints": [
+        "The process of mechanically densifying soil to improve its strength and reduce settlement",
+        "Done with rollers, plate compactors, or rammers on site",
+        "Moisture content matters — too dry or too wet and the soil won't compact efficiently",
+        "Measured by comparing field density to the maximum from a Proctor test",
+        "Essential under roads, embankments, and building pads before construction begins"
+      ]
+    },
+    {
+      "number": 12,
+      "answer": "Pile Foundation",
+      "searchTags": ["pile foundation", "pile", "deep foundation", "driven pile"],
+      "hints": [
+        "A deep foundation system that transfers loads to stronger soil or rock far below the surface",
+        "Used when surface soils are too weak to support a structure directly",
+        "Can be driven (hammered) or bored (drilled) into the ground",
+        "Load transfer happens through end bearing at the tip and skin friction along the shaft",
+        "The Marina Bay Sands hotel in Singapore sits on thousands of them"
+      ]
+    },
+    {
+      "number": 13,
+      "answer": "Precast Concrete",
+      "searchTags": ["precast concrete", "precast", "prefabricated concrete"],
+      "hints": [
+        "Concrete elements cast and cured in a factory before being transported to site",
+        "Higher quality control than in-situ concrete — factory conditions are more consistent",
+        "Speeds up construction — elements arrive ready to install",
+        "Used for beams, columns, floor slabs, wall panels, and bridge girders",
+        "Contrast with in-situ (cast-in-place) concrete, which is poured directly into formwork on site"
+      ]
+    },
+    {
+      "number": 14,
+      "answer": "Factor of Safety",
+      "searchTags": ["factor of safety", "safety factor", "fos"],
+      "hints": [
+        "The ratio of a structure's capacity to the actual load it experiences",
+        "A value of 1.0 means the structure is exactly at its limit — no margin",
+        "Building codes mandate minimum values to account for uncertainty and variability",
+        "Typical values range from 1.5 to 3.0 depending on consequences of failure and load certainty",
+        "Formula: FoS = Capacity / Demand — the higher it is, the safer the design"
+      ]
+    },
+    {
+      "number": 15,
+      "answer": "Hydrology",
+      "searchTags": ["hydrology", "hydrology engineering", "drainage", "flood"],
+      "hints": [
+        "The science of water movement, distribution, and management on Earth",
+        "Civil engineers use it to design stormwater systems, dams, and flood protection",
+        "Involves estimating peak flows from rainfall events using catchment characteristics",
+        "The return period (e.g. 1-in-100-year flood) is a core concept",
+        "Underpins the design of culverts, retention ponds, and river channels"
+      ]
+    },
+    {
+      "number": 16,
+      "answer": "Deflection",
+      "searchTags": ["deflection", "beam deflection", "displacement"],
+      "hints": [
+        "The displacement of a structural member from its original position under load",
+        "Too much of it causes cracking, discomfort, and damage to non-structural elements",
+        "Codes specify maximum allowable values — typically span/250 or span/360",
+        "Stiffer sections (larger I) and shorter spans reduce it",
+        "Calculated using integration of the bending moment diagram or standard formulas"
+      ]
+    },
+    {
+      "number": 17,
+      "answer": "Grading",
+      "searchTags": ["grading", "site grading", "earthworks", "cut and fill"],
+      "hints": [
+        "The process of shaping the ground surface to a design elevation",
+        "Creates the correct slopes for drainage and prepares a site for construction",
+        "Involves cutting (removing soil) and filling (adding soil) to reach target levels",
+        "A grading plan shows contour lines of existing and finished ground",
+        "Balancing cut and fill minimises the cost of hauling material on or off site"
+      ]
+    },
+    {
+      "number": 18,
+      "answer": "Beam",
+      "searchTags": ["beam", "structural beam", "cantilever beam", "simply supported beam"],
+      "hints": [
+        "A horizontal structural member that carries transverse loads",
+        "The most fundamental element in structural engineering",
+        "Resists load through bending and shear",
+        "Cross-section shape matters — I-beams are efficient because material is concentrated away from the neutral axis",
+        "Types include simply supported, cantilever, continuous, and fixed-fixed beams"
+      ]
+    },
+    {
+      "number": 19,
+      "answer": "Permeability",
+      "searchTags": ["permeability", "hydraulic conductivity", "soil permeability", "darcy"],
+      "hints": [
+        "A soil's ability to allow water to pass through it",
+        "Gravel has high permeability; clay has very low permeability",
+        "Critical for designing drainage systems, dams, and contaminant containment",
+        "Measured by Darcy's Law: Q = kiA, where k is the hydraulic conductivity",
+        "A low-permeability clay core in an earth dam prevents water from seeping through"
+      ]
+    },
+    {
+      "number": 20,
+      "answer": "Prestressed Concrete",
+      "searchTags": ["prestressed concrete", "prestress", "post-tension", "pre-tension"],
+      "hints": [
+        "Concrete in which internal stresses are deliberately introduced before loading",
+        "High-tensile steel tendons are tensioned to put the concrete into compression",
+        "Because concrete is strong in compression, it can then resist tension loads without cracking",
+        "Used in long-span bridges, parking structures, and floor slabs",
+        "Two methods: pre-tensioning (steel tensioned before concrete is poured) and post-tensioning (after)"
+      ]
+    },
+    {
+      "number": 21,
+      "answer": "Geotechnical Engineering",
+      "searchTags": ["geotechnical", "geotechnical engineering", "soil mechanics"],
+      "hints": [
+        "The branch of civil engineering dealing with soil and rock behaviour",
+        "Informs foundation design, slope stability, and underground construction",
+        "Karl Terzaghi is considered the father of modern soil mechanics",
+        "Key tests include Standard Penetration Test (SPT) and Cone Penetration Test (CPT)",
+        "Uncertainty in soil properties makes it one of the most judgement-intensive disciplines in engineering"
+      ]
+    },
+    {
+      "number": 22,
+      "answer": "Waterproofing",
+      "searchTags": ["waterproofing", "damp proofing", "basement waterproofing"],
+      "hints": [
+        "The application of materials or systems to prevent water ingress into a structure",
+        "Basements, tunnels, roofs, and bathrooms all require it",
+        "Failure leads to dampness, corrosion of reinforcement, and structural deterioration",
+        "Methods include membranes, crystalline admixtures, and drainage boards",
+        "The distinction between waterproofing (zero water) and damp-proofing (reduced moisture) matters in design"
+      ]
+    },
+    {
+      "number": 23,
+      "answer": "Structural Steel",
+      "searchTags": ["structural steel", "steel structure", "steel frame", "wide flange"],
+      "hints": [
+        "Steel sections used as the primary load-carrying elements in buildings and bridges",
+        "High strength, ductile, and fully recyclable",
+        "Standard sections include I-beams (wide flange), channels, angles, and hollow sections",
+        "Connections are made by bolting or welding",
+        "Steel frames allow open-plan layouts and fast construction — no need to wait for concrete to cure"
+      ]
+    },
+    {
+      "number": 24,
+      "answer": "Drainage",
+      "searchTags": ["drainage", "stormwater drainage", "surface drainage", "storm drain"],
+      "hints": [
+        "The system for collecting and conveying surface and subsurface water",
+        "Prevents flooding, erosion, and waterlogging of structures and roads",
+        "Includes gutters, pipes, culverts, channels, and retention basins",
+        "Designed for a specific storm event (e.g. 10-year or 100-year return period)",
+        "Poor drainage is one of the most common causes of pavement and slope failures"
+      ]
+    },
+    {
+      "number": 25,
+      "answer": "Arch",
+      "searchTags": ["arch", "arch bridge", "arch structure"],
+      "hints": [
+        "A curved structural form that carries loads primarily in compression",
+        "Romans used them extensively — some 2000-year-old examples still stand",
+        "The curved geometry redirects vertical loads into diagonal thrusts at the supports",
+        "Extremely efficient in masonry and concrete, which are strong in compression",
+        "The Sydney Harbour Bridge and St. Louis Gateway Arch are iconic modern examples"
+      ]
+    },
+    {
+      "number": 26,
+      "answer": "Formwork",
+      "searchTags": ["formwork", "shuttering", "falsework"],
+      "hints": [
+        "Temporary molds into which concrete is poured and allowed to set",
+        "Must be strong enough to hold the liquid concrete without deflecting",
+        "Made from timber, steel, aluminium, or plastic panels",
+        "Accounts for a significant portion of in-situ concrete construction cost",
+        "Stripped after the concrete reaches sufficient strength; reusable systems reduce cost"
+      ]
+    },
+    {
+      "number": 27,
+      "answer": "Slope Stability",
+      "searchTags": ["slope stability", "landslide", "slip circle", "embankment"],
+      "hints": [
+        "The analysis of whether a slope will remain in place or fail",
+        "A slope fails when shear stresses exceed soil shear strength along a failure surface",
+        "Rainfall is the most common trigger — water raises pore pressure and reduces effective strength",
+        "Analysed using methods like Bishop's simplified method or limit equilibrium",
+        "Countermeasures include drainage, soil nailing, retaining walls, and reducing slope angle"
+      ]
+    },
+    {
+      "number": 28,
+      "answer": "Traffic Engineering",
+      "searchTags": ["traffic engineering", "traffic flow", "intersection design", "traffic"],
+      "hints": [
+        "The branch of civil engineering dealing with the safe and efficient movement of people and goods",
+        "Designs road geometries, signal timings, and intersection layouts",
+        "Uses traffic counts and flow models to predict congestion",
+        "Level of Service (LOS) A–F is the standard framework for rating road performance",
+        "Roundabouts, grade separations, and dynamic signal control are common tools"
+      ]
+    },
+    {
+      "number": 29,
+      "answer": "Surveying",
+      "searchTags": ["surveying", "land survey", "topographic survey", "total station"],
+      "hints": [
+        "The science of measuring and mapping the Earth's surface",
+        "Essential before any construction project — you need to know exactly where things are",
+        "Instruments include total stations, GPS receivers, and laser levels",
+        "Produces topographic maps, boundary plans, and as-built records",
+        "Modern techniques include LiDAR scanning and drone photogrammetry for large-area surveys"
+      ]
+    },
+    {
+      "number": 30,
+      "answer": "Pavement",
+      "searchTags": ["pavement", "road pavement", "flexible pavement", "rigid pavement"],
+      "hints": [
+        "The layered structure that forms the surface of a road, runway, or car park",
+        "Distributes vehicle loads so stresses reaching the subgrade are within acceptable limits",
+        "Two main types: flexible (asphalt over granular base) and rigid (concrete slab)",
+        "Design life is typically 20–40 years; distress modes include rutting, cracking, and potholes",
+        "Structural design uses CBR (California Bearing Ratio) of subgrade soil as a key input"
+      ]
+    }
+  ]
+}

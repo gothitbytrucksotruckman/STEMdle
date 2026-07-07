@@ -1,0 +1,365 @@
+{
+  "section": "electro",
+  "terms": [
+    {
+      "number": 1,
+      "answer": "Impedance",
+      "searchTags": ["impedance", "impedence", "ac resistance"],
+      "hints": [
+        "A property describing opposition to current flow in a circuit",
+        "Extends the idea of resistance to AC circuits as a complex number",
+        "Combines resistance and reactance into one value",
+        "Symbol Z, measured in ohms",
+        "The key thing you match between speakers and amplifiers for maximum power transfer"
+      ]
+    },
+    {
+      "number": 2,
+      "answer": "Capacitor",
+      "searchTags": ["capacitor", "cap", "capacitance"],
+      "hints": [
+        "A passive component found in nearly every circuit",
+        "Stores energy in an electric field between two conducting plates",
+        "Blocks DC while allowing AC to pass through",
+        "Measured in farads (F) — most practical capacitors are in microfarads or picofarads",
+        "Common types include electrolytic, ceramic, and film capacitors"
+      ]
+    },
+    {
+      "number": 3,
+      "answer": "Ohm's Law",
+      "searchTags": ["ohm's law", "ohms law", "voltage current resistance"],
+      "hints": [
+        "The most fundamental relationship in basic circuit analysis",
+        "Named after German physicist Georg Simon Ohm, published in 1827",
+        "Describes how voltage, current, and resistance relate in a linear circuit",
+        "Double the resistance, halve the current — all else equal",
+        "Formula: V = IR, where V is voltage, I is current, and R is resistance"
+      ]
+    },
+    {
+      "number": 4,
+      "answer": "Transistor",
+      "searchTags": ["transistor", "bjt", "mosfet", "semiconductor switch"],
+      "hints": [
+        "The fundamental building block of modern electronics",
+        "Invented at Bell Labs in 1947 by Bardeen, Brattain, and Shockley",
+        "Acts as either an amplifier or a switch depending on the circuit",
+        "Billions of them are packed into every modern CPU",
+        "Two main types: bipolar junction (BJT) and field-effect (MOSFET)"
+      ]
+    },
+    {
+      "number": 5,
+      "answer": "Inductor",
+      "searchTags": ["inductor", "coil", "inductance", "choke"],
+      "hints": [
+        "A passive component that stores energy in a magnetic field",
+        "Made from a coil of wire, sometimes wound around a ferromagnetic core",
+        "Opposes changes in current — if current tries to change, it pushes back",
+        "Measured in henries (H)",
+        "Used in filters, transformers, and switching power supplies; its opposition to AC is called inductive reactance"
+      ]
+    },
+    {
+      "number": 6,
+      "answer": "Diode",
+      "searchTags": ["diode", "rectifier diode", "led", "p-n junction"],
+      "hints": [
+        "A two-terminal component that allows current to flow in only one direction",
+        "Used in power supplies to convert AC to DC",
+        "Has an anode (+) and a cathode (−); current flows from anode to cathode",
+        "A forward voltage drop of roughly 0.7 V is typical for silicon types",
+        "The LED (light-emitting diode) is a special version that emits light when forward-biased"
+      ]
+    },
+    {
+      "number": 7,
+      "answer": "Voltage",
+      "searchTags": ["voltage", "potential difference", "emf", "electric potential"],
+      "hints": [
+        "The electrical 'pressure' that drives current through a circuit",
+        "Measured in volts (V), named after Alessandro Volta",
+        "Always measured between two points — it's a potential difference",
+        "A 9 V battery maintains this value between its terminals",
+        "Formally defined as energy per unit charge: V = W/Q, in joules per coulomb"
+      ]
+    },
+    {
+      "number": 8,
+      "answer": "Resistor",
+      "searchTags": ["resistor", "resistance", "ohm"],
+      "hints": [
+        "The simplest passive component — it opposes current flow",
+        "Found in virtually every circuit to set voltages and limit currents",
+        "Colour bands on its body encode its resistance value",
+        "Dissipates electrical energy as heat",
+        "Measured in ohms (Ω); power rating (watts) determines how much heat it can safely handle"
+      ]
+    },
+    {
+      "number": 9,
+      "answer": "Op-Amp",
+      "searchTags": ["op-amp", "operational amplifier", "opamp"],
+      "hints": [
+        "A high-gain differential amplifier in a small integrated circuit package",
+        "The workhorse of analog circuit design",
+        "Ideally has infinite input impedance and zero output impedance",
+        "Used to build amplifiers, filters, comparators, and oscillators",
+        "The LM741 and LM358 are classic examples; with negative feedback it becomes extremely versatile"
+      ]
+    },
+    {
+      "number": 10,
+      "answer": "PWM",
+      "searchTags": ["pwm", "pulse width modulation"],
+      "hints": [
+        "A technique for controlling power delivery using rapidly switching signals",
+        "Used to dim LEDs, control motor speed, and regulate voltages",
+        "The output is always either fully on or fully off — never in between",
+        "The ratio of on-time to total period is called the duty cycle",
+        "Stands for Pulse Width Modulation — a 50% duty cycle means half on, half off"
+      ]
+    },
+    {
+      "number": 11,
+      "answer": "Kirchhoff's Laws",
+      "searchTags": ["kirchhoff", "kirchhoff's laws", "kvl", "kcl"],
+      "hints": [
+        "Two fundamental rules for analyzing electrical circuits",
+        "Named after German physicist Gustav Kirchhoff, formulated in 1845",
+        "The current law (KCL): current into a node equals current out",
+        "The voltage law (KVL): voltages around any closed loop sum to zero",
+        "Together with Ohm's Law, they let you solve any linear circuit systematically"
+      ]
+    },
+    {
+      "number": 12,
+      "answer": "Transformer",
+      "searchTags": ["transformer", "step-up", "step-down", "turns ratio"],
+      "hints": [
+        "A device that transfers electrical energy between circuits via electromagnetic induction",
+        "The reason AC power can be transmitted efficiently over long distances",
+        "Steps voltage up or down depending on the ratio of primary to secondary windings",
+        "No moving parts — operates entirely through magnetic coupling",
+        "Formula: V₁/V₂ = N₁/N₂, where N is the number of turns in each winding"
+      ]
+    },
+    {
+      "number": 13,
+      "answer": "Ground",
+      "searchTags": ["ground", "earth", "gnd", "reference potential"],
+      "hints": [
+        "The reference point from which voltages in a circuit are measured",
+        "Not always connected to the physical earth — it's just the zero-volt reference",
+        "Every circuit needs one — without a reference, voltage measurements are meaningless",
+        "Shown on schematics as a downward triangle or horizontal lines",
+        "Earth ground in mains wiring is a safety feature; signal ground is a reference — confusing them causes problems"
+      ]
+    },
+    {
+      "number": 14,
+      "answer": "Frequency",
+      "searchTags": ["frequency", "hz", "hertz", "ac frequency"],
+      "hints": [
+        "The number of complete cycles per second of a periodic signal",
+        "Mains electricity runs at 50 Hz (most of the world) or 60 Hz (Americas/Japan)",
+        "Measured in hertz (Hz), named after Heinrich Hertz",
+        "Higher frequencies carry more data — why 5G uses higher bands than 4G",
+        "Inverse of period: f = 1/T, where T is the time for one full cycle"
+      ]
+    },
+    {
+      "number": 15,
+      "answer": "Short Circuit",
+      "searchTags": ["short circuit", "short", "fault"],
+      "hints": [
+        "An unintended low-resistance path between two points in a circuit",
+        "Causes excessive current to flow, often destroying components",
+        "What happens when a wire accidentally bridges two terminals of a battery",
+        "Fuses and circuit breakers exist specifically to protect against this",
+        "In an ideal short: resistance = 0 Ω, so by Ohm's Law, current → ∞"
+      ]
+    },
+    {
+      "number": 16,
+      "answer": "ADC",
+      "searchTags": ["adc", "analog to digital converter", "analog digital"],
+      "hints": [
+        "A component that converts real-world analog signals into digital numbers",
+        "Found in every microcontroller, smartphone, and audio interface",
+        "Resolution — typically 8, 10, or 12 bits — determines how finely it can distinguish levels",
+        "A microphone's output passes through one before a processor can work with it",
+        "Stands for Analog-to-Digital Converter; the reverse process is done by a DAC"
+      ]
+    },
+    {
+      "number": 17,
+      "answer": "Power Factor",
+      "searchTags": ["power factor", "pf", "reactive power"],
+      "hints": [
+        "A measure of how efficiently electrical power is being used",
+        "Ranges from 0 to 1 — a value of 1 means all power drawn does useful work",
+        "Caused by reactive components (inductors and capacitors) that store and return energy",
+        "Industrial facilities pay penalties for a low value because it wastes grid capacity",
+        "Defined as the cosine of the phase angle between voltage and current: PF = cos(φ)"
+      ]
+    },
+    {
+      "number": 18,
+      "answer": "Oscilloscope",
+      "searchTags": ["oscilloscope", "scope", "oscilloscope probe"],
+      "hints": [
+        "The most essential test instrument in electronics",
+        "Displays voltage as a function of time on a screen",
+        "Used to debug signals, measure frequency, and spot noise or glitches",
+        "Probes connect to a circuit; trigger settings determine when the display locks onto a repeating signal",
+        "Modern versions are digital (DSO) and can store, analyze, and export waveforms"
+      ]
+    },
+    {
+      "number": 19,
+      "answer": "Resonant Frequency",
+      "searchTags": ["resonant frequency", "resonance frequency", "lc circuit", "natural frequency"],
+      "hints": [
+        "The frequency at which an LC circuit naturally oscillates",
+        "At this frequency, inductive and capacitive reactances are equal and cancel each other",
+        "The basis of radio tuning — adjusting a capacitor shifts this to select a station",
+        "Also appears in mechanical systems — the Tacoma Narrows Bridge had one that wind excited",
+        "Formula: f₀ = 1 / (2π√(LC)), where L is inductance and C is capacitance"
+      ]
+    },
+    {
+      "number": 20,
+      "answer": "Relay",
+      "searchTags": ["relay", "electromechanical relay", "contactor"],
+      "hints": [
+        "An electrically operated switch",
+        "Allows a low-power signal to control a high-power circuit with no direct connection",
+        "Used in cars, industrial equipment, and home appliances",
+        "Contains a coil that generates a magnetic field to mechanically move a contact",
+        "Solid-state relays (SSRs) do the same job with no moving parts, using transistors instead"
+      ]
+    },
+    {
+      "number": 21,
+      "answer": "Signal-to-Noise Ratio",
+      "searchTags": ["signal to noise ratio", "snr", "s/n ratio"],
+      "hints": [
+        "A measure of how much useful signal there is relative to background noise",
+        "Higher is better — a high value means a clean, strong signal",
+        "Critical in audio, radio, and sensor design",
+        "Measured in decibels (dB)",
+        "Defined as 10·log₁₀(P_signal / P_noise) for power, or 20·log₁₀(V_signal / V_noise) for voltage"
+      ]
+    },
+    {
+      "number": 22,
+      "answer": "Rectifier",
+      "searchTags": ["rectifier", "full wave rectifier", "half wave rectifier", "ac to dc"],
+      "hints": [
+        "A circuit that converts AC into DC",
+        "The first stage inside every power adapter and charger",
+        "A half-wave version uses one diode; a full-wave bridge uses four",
+        "The output is pulsating DC — a smoothing capacitor is added to flatten it",
+        "Without one, your laptop or phone couldn't use mains electricity"
+      ]
+    },
+    {
+      "number": 23,
+      "answer": "Bandwidth",
+      "searchTags": ["bandwidth", "3db bandwidth", "frequency response"],
+      "hints": [
+        "In electronics, the range of frequencies a circuit or component can handle",
+        "An audio amplifier's bandwidth determines which frequencies it reproduces faithfully",
+        "Measured in hertz (Hz) or megahertz (MHz)",
+        "Defined as the frequency range over which gain stays within 3 dB of its peak",
+        "Wider bandwidth means faster signal processing — critical in RF and data communications"
+      ]
+    },
+    {
+      "number": 24,
+      "answer": "Microcontroller",
+      "searchTags": ["microcontroller", "mcu", "arduino", "embedded"],
+      "hints": [
+        "A small computer on a single integrated circuit",
+        "Contains a processor, memory, and programmable I/O — all in one chip",
+        "Arduino boards are built around one, making them popular for prototyping",
+        "Used in appliances, toys, cars, and industrial equipment",
+        "Different from a CPU — it's designed for specific embedded control tasks, not general computing"
+      ]
+    },
+    {
+      "number": 25,
+      "answer": "Fuse",
+      "searchTags": ["fuse", "electrical fuse", "overcurrent protection"],
+      "hints": [
+        "A one-time overcurrent protection device",
+        "Contains a thin wire that melts and breaks the circuit when current exceeds its rating",
+        "Found in cars, power supplies, and mains plugs",
+        "Rated in amperes — a 5 A fuse blows when current exceeds 5 A",
+        "Unlike a circuit breaker, it cannot be reset — it must be replaced after it blows"
+      ]
+    },
+    {
+      "number": 26,
+      "answer": "EMF",
+      "searchTags": ["emf", "electromotive force", "electromagnetic force"],
+      "hints": [
+        "The energy per unit charge supplied by a source to drive current around a circuit",
+        "Informally called 'voltage' of a battery or generator, though technically distinct",
+        "A battery's rated voltage is this value under open-circuit (no load) conditions",
+        "Under load, terminal voltage drops below it due to internal resistance",
+        "Stands for Electromotive Force — measured in volts"
+      ]
+    },
+    {
+      "number": 27,
+      "answer": "Multimeter",
+      "searchTags": ["multimeter", "dmm", "digital multimeter", "voltmeter"],
+      "hints": [
+        "The most common electrical test instrument",
+        "Measures voltage, current, and resistance in a single handheld device",
+        "Most modern versions are digital (DMM) with an LCD readout",
+        "A continuity beep tells you a circuit is unbroken without having to read the display",
+        "Misusing it — e.g. measuring current without the correct probe jack — can blow its internal fuse"
+      ]
+    },
+    {
+      "number": 28,
+      "answer": "Gain",
+      "searchTags": ["gain", "amplifier gain", "voltage gain", "decibel gain"],
+      "hints": [
+        "The ratio of output to input in an amplifier",
+        "A gain of 10 means the output is 10 times larger than the input",
+        "Can be expressed as a plain ratio or in decibels (dB)",
+        "Too much of it without negative feedback causes instability and oscillation",
+        "In dB: Gain (dB) = 20·log₁₀(V_out / V_in) for voltage"
+      ]
+    },
+    {
+      "number": 29,
+      "answer": "PCB",
+      "searchTags": ["pcb", "printed circuit board", "circuit board"],
+      "hints": [
+        "The flat board that mechanically supports and electrically connects electronic components",
+        "The green (or sometimes blue/red/black) board inside every electronic device",
+        "Copper traces etched onto a non-conducting substrate replace wired connections",
+        "Designed using EDA software (KiCad, Altium, Eagle) then manufactured in batches",
+        "Stands for Printed Circuit Board — multi-layer versions can stack dozens of copper layers"
+      ]
+    },
+    {
+      "number": 30,
+      "answer": "Three-Phase Power",
+      "searchTags": ["three phase", "3 phase", "three phase power", "3-phase"],
+      "hints": [
+        "The standard system for transmitting and distributing electrical power commercially",
+        "Uses three AC voltages offset by 120° from each other",
+        "More efficient than single-phase — delivers more power with less conductor material",
+        "Industrial motors run on it because it produces a rotating magnetic field naturally",
+        "The grid you see on power lines is almost always this; your home splits off just one or two phases"
+      ]
+    }
+  ]
+}

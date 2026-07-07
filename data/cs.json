@@ -1,0 +1,365 @@
+{
+  "section": "cs",
+  "terms": [
+    {
+      "number": 1,
+      "answer": "Recursion",
+      "searchTags": ["recursion", "recursive", "recurse"],
+      "hints": [
+        "A programming technique where a solution is built by solving smaller versions of the same problem",
+        "Every use of this technique requires a base case — otherwise it runs forever",
+        "Classic example: computing a factorial or traversing a tree",
+        "The call stack grows with each invocation — too many levels causes a stack overflow",
+        "Defined formally as: a function that calls itself with modified arguments until reaching the base case"
+      ]
+    },
+    {
+      "number": 2,
+      "answer": "API",
+      "searchTags": ["api", "application programming interface"],
+      "hints": [
+        "A defined contract that lets two pieces of software talk to each other",
+        "You use one every time you fetch weather data or log in with Google",
+        "REST and GraphQL are two common styles for building these on the web",
+        "Defines endpoints, request formats, and response schemas — but hides internal implementation",
+        "Stands for Application Programming Interface"
+      ]
+    },
+    {
+      "number": 3,
+      "answer": "Binary Search",
+      "searchTags": ["binary search", "binary search algorithm", "bisect"],
+      "hints": [
+        "A fast way to find an item in a sorted list",
+        "Cuts the search space in half with every comparison",
+        "Requires the data to be sorted — otherwise it gives wrong answers",
+        "Time complexity: O(log n) — far better than scanning every element",
+        "Works by comparing the target to the middle element and eliminating half the range"
+      ]
+    },
+    {
+      "number": 4,
+      "answer": "Cache",
+      "searchTags": ["cache", "caching", "cpu cache"],
+      "hints": [
+        "A temporary store of data that makes future access faster",
+        "Your browser uses one to avoid re-downloading images every visit",
+        "CPUs have multiple layers of it (L1, L2, L3) sitting between the processor and RAM",
+        "The fundamental tradeoff: faster access, but data can go stale",
+        "A cache miss means the data wasn't found and must be fetched from the slower source"
+      ]
+    },
+    {
+      "number": 5,
+      "answer": "Deadlock",
+      "searchTags": ["deadlock", "dead lock"],
+      "hints": [
+        "A situation where a system can make no further progress",
+        "Occurs in concurrent programs when multiple threads wait on each other indefinitely",
+        "Like two people each holding a door for the other — neither can move",
+        "Requires four conditions: mutual exclusion, hold-and-wait, no preemption, circular wait",
+        "Classic example: thread A holds lock 1 and waits for lock 2, while thread B holds lock 2 and waits for lock 1"
+      ]
+    },
+    {
+      "number": 6,
+      "answer": "Encryption",
+      "searchTags": ["encryption", "encrypt", "cipher"],
+      "hints": [
+        "The process of scrambling data so only authorized parties can read it",
+        "Used every time you visit an HTTPS website",
+        "Symmetric vs asymmetric are its two main categories",
+        "AES and RSA are two of the most widely deployed algorithms",
+        "Converts plaintext into ciphertext using a key — decryption reverses the process with the same or paired key"
+      ]
+    },
+    {
+      "number": 7,
+      "answer": "Hash Table",
+      "searchTags": ["hash table", "hashmap", "hash map", "dictionary"],
+      "hints": [
+        "A data structure that maps keys to values for extremely fast lookups",
+        "Used under the hood in Python dicts and JavaScript objects",
+        "A hash function determines where each key is stored",
+        "Average-case lookup, insert, and delete are all O(1)",
+        "Collisions — two keys mapping to the same slot — are handled by chaining or open addressing"
+      ]
+    },
+    {
+      "number": 8,
+      "answer": "Kernel",
+      "searchTags": ["kernel", "os kernel", "operating system kernel"],
+      "hints": [
+        "The core component of an operating system",
+        "Manages communication between hardware and software",
+        "Linux is named after it — Linus Torvalds wrote the first version in 1991",
+        "Handles memory management, process scheduling, and device drivers",
+        "User programs can't access hardware directly — they make system calls to it"
+      ]
+    },
+    {
+      "number": 9,
+      "answer": "SQL",
+      "searchTags": ["sql", "structured query language", "sequel"],
+      "hints": [
+        "The standard language for interacting with relational databases",
+        "Used by MySQL, PostgreSQL, SQLite, and most major databases",
+        "SELECT, INSERT, UPDATE, DELETE are its four core operations",
+        "Declarative — you describe what you want, not how to get it",
+        "Stands for Structured Query Language, though it's pronounced 'sequel' by many"
+      ]
+    },
+    {
+      "number": 10,
+      "answer": "TCP",
+      "searchTags": ["tcp", "transmission control protocol", "tcp/ip"],
+      "hints": [
+        "A foundational protocol of the internet",
+        "Unlike its sibling UDP, it guarantees delivery and ordering of packets",
+        "Used by HTTP, email, and file transfers where data integrity matters",
+        "Establishes connections with a 3-way handshake (SYN, SYN-ACK, ACK)",
+        "Stands for Transmission Control Protocol"
+      ]
+    },
+    {
+      "number": 11,
+      "answer": "Garbage Collection",
+      "searchTags": ["garbage collection", "gc", "garbage collector"],
+      "hints": [
+        "An automatic memory management technique",
+        "Frees programmers from manually tracking and releasing memory",
+        "Used in Java, Python, Go, and many modern languages",
+        "Can cause 'stop-the-world' pauses that briefly freeze a running program",
+        "Finds objects that are no longer reachable from any active reference and reclaims their memory"
+      ]
+    },
+    {
+      "number": 12,
+      "answer": "Virtual Machine",
+      "searchTags": ["virtual machine", "vm", "hypervisor"],
+      "hints": [
+        "Software that emulates a complete computer inside another computer",
+        "Lets you run Linux on a Windows machine without rebooting",
+        "Cloud providers like AWS and Azure sell access to thousands of these",
+        "Isolated from the host — a crash inside it doesn't affect the outer system",
+        "Managed by a hypervisor (VMware, VirtualBox, KVM) that allocates host hardware resources"
+      ]
+    },
+    {
+      "number": 13,
+      "answer": "Linked List",
+      "searchTags": ["linked list", "linkedlist", "singly linked list"],
+      "hints": [
+        "A linear data structure where elements are stored in nodes",
+        "Unlike an array, elements are not stored contiguously in memory",
+        "Each node holds a value and a pointer to the next node",
+        "Insertion and deletion at the head are O(1) — but random access is O(n)",
+        "A doubly linked list also has a pointer pointing backward to the previous node"
+      ]
+    },
+    {
+      "number": 14,
+      "answer": "Compiler",
+      "searchTags": ["compiler", "compile", "transpiler"],
+      "hints": [
+        "A program that translates source code into another form",
+        "Turns human-readable code into machine instructions before the program runs",
+        "GCC, Clang, and javac are well-known examples",
+        "Performs lexing, parsing, optimization, and code generation as separate stages",
+        "Contrast with an interpreter, which executes source code line by line at runtime"
+      ]
+    },
+    {
+      "number": 15,
+      "answer": "Latency",
+      "searchTags": ["latency", "ping", "lag"],
+      "hints": [
+        "The delay between a request being sent and a response arriving",
+        "Gamers know it as 'ping' — high values mean a laggy experience",
+        "Measured in milliseconds for network communication",
+        "Affected by physical distance, number of hops, and congestion on the network",
+        "Distinct from throughput — a pipe can carry a lot of water (high throughput) but still take time to start flowing (latency)"
+      ]
+    },
+    {
+      "number": 16,
+      "answer": "Stack",
+      "searchTags": ["stack", "call stack", "lifo"],
+      "hints": [
+        "A data structure that operates on a last-in, first-out principle",
+        "Think of a stack of plates — you always take from the top",
+        "Your browser's back button uses one to track navigation history",
+        "Supports two primary operations: push (add to top) and pop (remove from top)",
+        "Also refers to the call stack — the record of active function calls in a running program"
+      ]
+    },
+    {
+      "number": 17,
+      "answer": "Null Pointer",
+      "searchTags": ["null pointer", "null", "nullptr", "nullpointerexception", "nil"],
+      "hints": [
+        "A reference that points to nothing",
+        "Dereferencing one is one of the most common runtime crashes in programming",
+        "Tony Hoare called inventing it his 'billion-dollar mistake'",
+        "In Java, accessing a field on one throws a NullPointerException",
+        "Modern languages like Rust and Kotlin eliminate it with Option/Maybe types or nullable distinctions"
+      ]
+    },
+    {
+      "number": 18,
+      "answer": "DNS",
+      "searchTags": ["dns", "domain name system", "domain name"],
+      "hints": [
+        "The phonebook of the internet",
+        "Translates human-readable names into IP addresses",
+        "When you type google.com, this system figures out the actual address to connect to",
+        "Hierarchical: root servers → TLD servers (.com, .org) → authoritative servers for each domain",
+        "Stands for Domain Name System"
+      ]
+    },
+    {
+      "number": 19,
+      "answer": "Big O Notation",
+      "searchTags": ["big o", "big o notation", "time complexity", "asymptotic"],
+      "hints": [
+        "A mathematical notation describing how an algorithm's cost scales with input size",
+        "O(1) is constant time, O(n) is linear, O(n²) gets bad fast",
+        "Ignores constants — O(2n) and O(n) are considered the same",
+        "Used to compare algorithms without running them on specific hardware",
+        "The 'O' comes from 'order of' — formally it describes an upper bound on growth rate"
+      ]
+    },
+    {
+      "number": 20,
+      "answer": "Git",
+      "searchTags": ["git", "version control", "git repo"],
+      "hints": [
+        "The most widely used version control system in the world",
+        "Tracks changes to files over time so you can revert, branch, and merge",
+        "Created by Linus Torvalds in 2005 to manage Linux kernel development",
+        "Distributed — every developer has a full copy of the history locally",
+        "GitHub, GitLab, and Bitbucket are hosting platforms built around it"
+      ]
+    },
+    {
+      "number": 21,
+      "answer": "Concurrency",
+      "searchTags": ["concurrency", "concurrent", "parallelism"],
+      "hints": [
+        "Dealing with multiple things happening at overlapping time intervals",
+        "Not the same as parallelism — things can be concurrent on a single CPU core",
+        "Web servers use this to handle thousands of requests without dedicated threads per user",
+        "Introduces complexity: race conditions, deadlocks, and synchronization problems",
+        "Go's goroutines and JavaScript's event loop are two very different models for achieving it"
+      ]
+    },
+    {
+      "number": 22,
+      "answer": "HTTP",
+      "searchTags": ["http", "hypertext transfer protocol", "https"],
+      "hints": [
+        "The foundation of data communication on the World Wide Web",
+        "Every time you visit a website, your browser uses this",
+        "Stateless — each request is independent, which is why cookies exist",
+        "Methods include GET, POST, PUT, DELETE, and PATCH",
+        "Stands for HyperText Transfer Protocol; the secure version adds TLS and becomes HTTPS"
+      ]
+    },
+    {
+      "number": 23,
+      "answer": "Docker",
+      "searchTags": ["docker", "container", "containerization"],
+      "hints": [
+        "A platform for packaging and running applications in isolated environments",
+        "Solves the classic 'it works on my machine' problem",
+        "Lighter than a virtual machine — shares the host OS kernel",
+        "Apps run in containers built from images defined in a Dockerfile",
+        "The standard tool for containerization; Kubernetes is often used to orchestrate many of them"
+      ]
+    },
+    {
+      "number": 24,
+      "answer": "Sorting Algorithm",
+      "searchTags": ["sorting algorithm", "sort", "quicksort", "mergesort", "bubble sort"],
+      "hints": [
+        "A procedure for arranging elements in a defined order",
+        "One of the most studied categories in computer science",
+        "QuickSort and MergeSort are the workhorses of most standard libraries",
+        "Bubble Sort is famous for being simple and famously slow — O(n²)",
+        "The theoretical lower bound for comparison-based versions is O(n log n)"
+      ]
+    },
+    {
+      "number": 25,
+      "answer": "Thread",
+      "searchTags": ["thread", "multithreading", "multi-thread"],
+      "hints": [
+        "The smallest unit of execution that can be scheduled by an operating system",
+        "Multiple ones can share memory within the same process",
+        "Creating too many causes overhead — the OS spends more time switching between them than doing work",
+        "Synchronization primitives like mutexes and semaphores coordinate access to shared data",
+        "Contrast with a process, which has its own separate memory space"
+      ]
+    },
+    {
+      "number": 26,
+      "answer": "IP Address",
+      "searchTags": ["ip address", "ip", "ipv4", "ipv6", "internet protocol"],
+      "hints": [
+        "A numerical label assigned to each device on a network",
+        "Your router has one visible to the internet, and each device on your home network has a private one",
+        "IPv4 uses 32 bits — the format 192.168.1.1 is familiar to anyone who's configured a router",
+        "The internet is slowly migrating to IPv6 because IPv4 addresses are exhausted",
+        "Stands for Internet Protocol address — it's what DNS resolves domain names to"
+      ]
+    },
+    {
+      "number": 27,
+      "answer": "Debugging",
+      "searchTags": ["debugging", "debug", "debugger"],
+      "hints": [
+        "The process of identifying and fixing errors in software",
+        "The term originates from a 1947 incident where an actual moth caused a relay failure in a Harvard computer",
+        "Tools like breakpoints, step-through execution, and watch variables are core techniques",
+        "printf/console.log debugging is widely mocked but widely used",
+        "A debugger lets you pause a running program and inspect memory, variables, and the call stack at any point"
+      ]
+    },
+    {
+      "number": 28,
+      "answer": "Bandwidth",
+      "searchTags": ["bandwidth", "throughput", "network bandwidth"],
+      "hints": [
+        "The maximum rate at which data can be transferred over a network connection",
+        "Often confused with latency — high bandwidth doesn't mean low delay",
+        "Measured in bits per second (Mbps, Gbps)",
+        "Streaming 4K video requires roughly 25 Mbps",
+        "Like a highway's number of lanes — more lanes move more cars simultaneously, but don't reduce the travel time"
+      ]
+    },
+    {
+      "number": 29,
+      "answer": "Boolean",
+      "searchTags": ["boolean", "bool", "true false"],
+      "hints": [
+        "A data type with only two possible values",
+        "Named after mathematician George Boole",
+        "The foundation of all conditional logic in programming",
+        "In most languages: true or false, 1 or 0",
+        "Boolean algebra — AND, OR, NOT operations — is the mathematical basis of digital circuit design"
+      ]
+    },
+    {
+      "number": 30,
+      "answer": "Abstraction",
+      "searchTags": ["abstraction", "abstract", "information hiding"],
+      "hints": [
+        "Hiding complex implementation details behind a simpler interface",
+        "One of the four pillars of object-oriented programming",
+        "You use it every time you call a function without knowing how it's implemented",
+        "Operating systems provide it — you call 'open file' without knowing the disk sectors involved",
+        "Reduces cognitive load by letting programmers work at a higher level without worrying about lower-level mechanics"
+      ]
+    }
+  ]
+}

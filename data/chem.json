@@ -1,0 +1,365 @@
+{
+  "section": "chem",
+  "terms": [
+    {
+      "number": 1,
+      "answer": "Distillation",
+      "searchTags": ["distillation", "fractional distillation", "distill"],
+      "hints": [
+        "A separation process that exploits differences in boiling points",
+        "How crude oil is separated into petrol, diesel, and kerosene at a refinery",
+        "The mixture is heated; the more volatile component vaporises first and is condensed separately",
+        "Fractional distillation uses a column to separate components with close boiling points",
+        "Also used to produce spirits — the basis of every whisky and vodka production process"
+      ]
+    },
+    {
+      "number": 2,
+      "answer": "Catalyst",
+      "searchTags": ["catalyst", "catalysis", "catalytic", "enzyme"],
+      "hints": [
+        "A substance that speeds up a chemical reaction without being consumed",
+        "Lowers the activation energy of a reaction",
+        "Your car's catalytic converter uses platinum and palladium to clean exhaust gases",
+        "Enzymes are biological versions — highly specific and incredibly efficient",
+        "Heterogeneous catalysts are in a different phase from the reactants; homogeneous are in the same phase"
+      ]
+    },
+    {
+      "number": 3,
+      "answer": "Viscosity",
+      "searchTags": ["viscosity", "viscous", "fluid viscosity", "rheology"],
+      "hints": [
+        "A fluid's resistance to flow",
+        "Honey and molasses are highly viscous; water and ethanol are not",
+        "Decreases with temperature for most liquids — cold honey pours slower than warm honey",
+        "Measured in pascal-seconds (Pa·s) or centipoise (cP)",
+        "Critical in designing pipelines, pumps, and mixing equipment in chemical plants"
+      ]
+    },
+    {
+      "number": 4,
+      "answer": "Heat Exchanger",
+      "searchTags": ["heat exchanger", "shell and tube", "plate heat exchanger"],
+      "hints": [
+        "A device that transfers heat between two fluid streams without mixing them",
+        "Found in power plants, refineries, HVAC systems, and food processing",
+        "The driving force is temperature difference — heat flows from hot to cold",
+        "Common designs: shell-and-tube, plate-and-frame, and double-pipe",
+        "The log mean temperature difference (LMTD) is the key design parameter"
+      ]
+    },
+    {
+      "number": 5,
+      "answer": "Reaction Kinetics",
+      "searchTags": ["reaction kinetics", "kinetics", "rate of reaction", "rate constant"],
+      "hints": [
+        "The study of the rates at which chemical reactions proceed",
+        "Tells engineers how big a reactor needs to be for a given production rate",
+        "Rate depends on concentration, temperature, pressure, and catalyst presence",
+        "The Arrhenius equation relates rate constant to temperature",
+        "Reaction order describes how rate depends on reactant concentration: r = k[A]^n"
+      ]
+    },
+    {
+      "number": 6,
+      "answer": "Absorption",
+      "searchTags": ["absorption", "gas absorption", "scrubbing", "absorber"],
+      "hints": [
+        "A mass transfer process where a component from a gas is taken up by a liquid",
+        "Used in gas purification — removing CO₂ or H₂S from natural gas or flue gas",
+        "Occurs in a packed or tray column where gas and liquid contact each other",
+        "The driving force is concentration difference between phases",
+        "Distinct from adsorption — absorption is bulk uptake into a liquid; adsorption is surface-based"
+      ]
+    },
+    {
+      "number": 7,
+      "answer": "Thermodynamics",
+      "searchTags": ["thermodynamics", "enthalpy", "entropy", "gibbs energy"],
+      "hints": [
+        "The science governing energy transformations in chemical systems",
+        "Determines whether a reaction is feasible and how much heat it releases or absorbs",
+        "Enthalpy (H), entropy (S), and Gibbs free energy (G) are its core quantities",
+        "A negative ΔG means a reaction is spontaneous under given conditions",
+        "The first and second laws underpin all process design — you can't violate them"
+      ]
+    },
+    {
+      "number": 8,
+      "answer": "Mass Balance",
+      "searchTags": ["mass balance", "material balance", "conservation of mass"],
+      "hints": [
+        "An accounting of all material entering and leaving a system",
+        "Based on conservation of mass — what goes in must come out or accumulate",
+        "The first step in designing any chemical process",
+        "For a steady-state system: mass in = mass out (no accumulation)",
+        "Extended to include reactions: mass in + mass generated = mass out + mass consumed"
+      ]
+    },
+    {
+      "number": 9,
+      "answer": "Reactor",
+      "searchTags": ["reactor", "chemical reactor", "cstr", "pfr", "batch reactor"],
+      "hints": [
+        "The vessel in which a chemical reaction takes place",
+        "Design must account for kinetics, heat transfer, mixing, and safety",
+        "Three ideal models: batch, CSTR (continuous stirred tank), and PFR (plug flow)",
+        "A CSTR is well-mixed — concentration is uniform throughout",
+        "A PFR has no axial mixing — composition changes continuously along the length"
+      ]
+    },
+    {
+      "number": 10,
+      "answer": "Equilibrium",
+      "searchTags": ["equilibrium", "chemical equilibrium", "equilibrium constant", "le chatelier"],
+      "hints": [
+        "The state where forward and reverse reaction rates are equal",
+        "The reaction hasn't stopped — both directions proceed at the same rate",
+        "Described by an equilibrium constant K — large K means products dominate",
+        "Le Chatelier's principle: disturb the equilibrium and it shifts to counteract the disturbance",
+        "Temperature, pressure, and concentration changes all shift equilibrium position"
+      ]
+    },
+    {
+      "number": 11,
+      "answer": "Evaporation",
+      "searchTags": ["evaporation", "evaporator", "concentration"],
+      "hints": [
+        "The removal of a solvent (usually water) from a solution by vaporisation",
+        "Used to concentrate solutions in food, pharmaceutical, and chemical industries",
+        "Driven by supplying heat — the solvent boils off, leaving behind concentrated product",
+        "Multiple-effect evaporation reuses steam vapour from one stage to heat the next",
+        "Distinct from drying — evaporation deals with liquid solutions, not solid-wet material"
+      ]
+    },
+    {
+      "number": 12,
+      "answer": "Pressure Drop",
+      "searchTags": ["pressure drop", "pressure loss", "pipe pressure drop", "darcy weisbach"],
+      "hints": [
+        "The reduction in pressure as a fluid flows through a pipe, valve, or packed bed",
+        "Caused by friction between the fluid and the pipe wall, and turbulence",
+        "Must be accounted for when sizing pumps and compressors",
+        "Increases with flow velocity, pipe length, and pipe roughness",
+        "Calculated using the Darcy-Weisbach equation: ΔP = f(L/D)(ρv²/2)"
+      ]
+    },
+    {
+      "number": 13,
+      "answer": "Crystallisation",
+      "searchTags": ["crystallisation", "crystallization", "recrystallisation"],
+      "hints": [
+        "A separation and purification technique where a solute forms solid crystals from solution",
+        "Used to produce salt, sugar, pharmaceuticals, and fertilisers",
+        "Triggered by cooling the solution, evaporating solvent, or adding an anti-solvent",
+        "Crystal size and purity depend on nucleation and growth rates",
+        "Recrystallisation — dissolving and re-crystallising — is the classic lab purification method"
+      ]
+    },
+    {
+      "number": 14,
+      "answer": "Polymer",
+      "searchTags": ["polymer", "polymerization", "plastic", "monomer"],
+      "hints": [
+        "A large molecule made of repeating smaller units (monomers) bonded together",
+        "Plastics, rubber, fibres, and many biological molecules are all this",
+        "Polyethylene, PVC, nylon, and polystyrene are common engineering examples",
+        "Properties depend on chain length, branching, and cross-linking",
+        "Two main synthesis routes: addition polymerisation and condensation polymerisation"
+      ]
+    },
+    {
+      "number": 15,
+      "answer": "pH",
+      "searchTags": ["ph", "acidity", "alkalinity", "hydrogen ion"],
+      "hints": [
+        "A scale measuring the acidity or alkalinity of a solution",
+        "Ranges from 0 (most acidic) to 14 (most alkaline), with 7 being neutral",
+        "Each unit represents a tenfold change in hydrogen ion concentration",
+        "Critical in fermentation, water treatment, and pharmaceutical manufacturing",
+        "Defined as −log₁₀[H⁺], where [H⁺] is the molar concentration of hydrogen ions"
+      ]
+    },
+    {
+      "number": 16,
+      "answer": "Extraction",
+      "searchTags": ["extraction", "liquid liquid extraction", "solvent extraction"],
+      "hints": [
+        "A separation process using the preferential solubility of a compound in one solvent over another",
+        "Shaking an aqueous mixture with an organic solvent in a separating funnel is the lab version",
+        "Industrial scale uses mixer-settlers or extraction columns",
+        "The distribution coefficient (K_d) describes how the solute partitions between phases",
+        "Used to recover metals from ores, purify pharmaceuticals, and process nuclear fuel"
+      ]
+    },
+    {
+      "number": 17,
+      "answer": "Filtration",
+      "searchTags": ["filtration", "filter", "membrane filtration", "solid liquid separation"],
+      "hints": [
+        "Separation of solids from liquids or gases by passing them through a porous medium",
+        "The medium retains particles above a certain size while the fluid passes through",
+        "Industrial examples: rotary drum filters, filter presses, and membrane systems",
+        "Driving force can be pressure difference, gravity, or centrifugal force",
+        "Distinct from sieving — filtration can remove particles far smaller than visible pores"
+      ]
+    },
+    {
+      "number": 18,
+      "answer": "Combustion",
+      "searchTags": ["combustion", "burning", "complete combustion", "flue gas"],
+      "hints": [
+        "A rapid exothermic reaction between a fuel and oxygen",
+        "The energy source for most power generation, heating, and transportation",
+        "Complete combustion of hydrocarbons produces CO₂ and H₂O",
+        "Incomplete combustion produces CO, soot, and unburned hydrocarbons",
+        "Stoichiometric combustion uses exactly the right amount of air — excess air improves completeness"
+      ]
+    },
+    {
+      "number": 19,
+      "answer": "Adiabatic",
+      "searchTags": ["adiabatic", "adiabatic process", "adiabatic temperature"],
+      "hints": [
+        "A process that occurs without heat exchange with the surroundings",
+        "The system's temperature changes come only from internal energy changes",
+        "Rapid compression of gas is approximately adiabatic — diesel engine ignition exploits this",
+        "The adiabatic flame temperature is the maximum temperature a fuel can reach on combustion",
+        "From Greek: 'not passable' — heat cannot pass through the system boundary"
+      ]
+    },
+    {
+      "number": 20,
+      "answer": "Fluidised Bed",
+      "searchTags": ["fluidised bed", "fluidized bed", "fluidisation"],
+      "hints": [
+        "A reactor type where solid particles are suspended by an upward-flowing fluid",
+        "The solid behaves like a liquid — it can flow and mix vigorously",
+        "Excellent heat and mass transfer due to intimate gas-solid contact",
+        "Used in coal combustion, fluid catalytic cracking (FCC), and pharmaceutical coating",
+        "Named for the fluid-like behaviour of the solid particle bed when gas velocity exceeds minimum fluidisation velocity"
+      ]
+    },
+    {
+      "number": 21,
+      "answer": "Corrosion",
+      "searchTags": ["corrosion", "rusting", "electrochemical corrosion", "oxidation"],
+      "hints": [
+        "The gradual destruction of a material through chemical or electrochemical reaction with its environment",
+        "Steel rusting is the most familiar example — iron oxidises in the presence of water and oxygen",
+        "Costs the global economy an estimated 3–4% of GDP per year",
+        "Controlled by coatings, cathodic protection, material selection, or inhibitors",
+        "Galvanic corrosion occurs when two dissimilar metals are in electrical contact in an electrolyte"
+      ]
+    },
+    {
+      "number": 22,
+      "answer": "Scrubber",
+      "searchTags": ["scrubber", "wet scrubber", "gas scrubber", "flue gas desulfurisation"],
+      "hints": [
+        "A pollution control device that removes contaminants from industrial exhaust gases",
+        "Gas is passed through or over a liquid that absorbs the pollutant",
+        "Used to remove SO₂ from power plant flue gas (flue gas desulfurisation)",
+        "Also used to remove acid gases, dust, and odorous compounds",
+        "The wet scrubber is the most common type — the polluted gas contacts water or a reagent solution"
+      ]
+    },
+    {
+      "number": 23,
+      "answer": "Selectivity",
+      "searchTags": ["selectivity", "reaction selectivity", "yield selectivity"],
+      "hints": [
+        "A measure of how much of the desired product is formed relative to by-products",
+        "High selectivity means less waste and simpler downstream separation",
+        "Distinct from conversion — conversion measures how much reactant is consumed",
+        "Often a trade-off with conversion: conditions that maximise one may reduce the other",
+        "Defined as moles of desired product formed / moles of reactant consumed by all reactions"
+      ]
+    },
+    {
+      "number": 24,
+      "answer": "Energy Balance",
+      "searchTags": ["energy balance", "heat balance", "enthalpy balance"],
+      "hints": [
+        "An accounting of all energy entering and leaving a system",
+        "The thermal equivalent of a mass balance — based on conservation of energy",
+        "Used to size heat exchangers, determine utility requirements, and assess process efficiency",
+        "Includes sensible heat, latent heat, and heat of reaction",
+        "For steady state: energy in + energy generated = energy out + energy accumulated (= 0)"
+      ]
+    },
+    {
+      "number": 25,
+      "answer": "Drying",
+      "searchTags": ["drying", "dryer", "spray drying", "rotary dryer"],
+      "hints": [
+        "The removal of moisture from a solid or semi-solid material",
+        "One of the most energy-intensive unit operations in chemical processing",
+        "Involves both heat transfer (to evaporate moisture) and mass transfer (moisture leaving the solid)",
+        "Types include spray dryers, drum dryers, fluidised bed dryers, and freeze dryers",
+        "Drying rate has two phases: constant rate (surface drying) and falling rate (internal diffusion controls)"
+      ]
+    },
+    {
+      "number": 26,
+      "answer": "Mixing",
+      "searchTags": ["mixing", "agitation", "stirrer", "impeller"],
+      "hints": [
+        "The process of bringing different materials into intimate contact to achieve homogeneity",
+        "Critical for reactions, heat transfer, and suspension of solids",
+        "Impeller type (axial vs radial flow) and speed determine mixing intensity",
+        "Scale-up from lab to plant is notoriously difficult — power per unit volume changes",
+        "Poor mixing leads to hot spots, incomplete reactions, and inconsistent product quality"
+      ]
+    },
+    {
+      "number": 27,
+      "answer": "Safety Relief Valve",
+      "searchTags": ["safety relief valve", "pressure relief valve", "prv", "psv"],
+      "hints": [
+        "A device that automatically releases pressure from a vessel when it exceeds a set limit",
+        "The last line of defence against catastrophic overpressure failure",
+        "Mandatory on pressurised vessels, boilers, and process equipment",
+        "Opens at the set pressure and reseats when pressure drops below it",
+        "Sizing follows ASME or API standards; the consequences of undersizing are severe"
+      ]
+    },
+    {
+      "number": 28,
+      "answer": "Stoichiometry",
+      "searchTags": ["stoichiometry", "mole ratio", "limiting reagent", "theoretical yield"],
+      "hints": [
+        "The quantitative relationship between reactants and products in a chemical reaction",
+        "Based on the law of conservation of mass and balanced chemical equations",
+        "The limiting reagent is the reactant that runs out first and limits the yield",
+        "Theoretical yield is the maximum product possible based on limiting reagent",
+        "Essential for calculating feed rates, reactor sizing, and raw material costs"
+      ]
+    },
+    {
+      "number": 29,
+      "answer": "Membrane Separation",
+      "searchTags": ["membrane separation", "membrane", "reverse osmosis", "ultrafiltration"],
+      "hints": [
+        "A separation process using a semipermeable barrier to selectively pass certain species",
+        "Reverse osmosis uses it to desalinate seawater — applying pressure to force water through",
+        "Driving forces can be pressure, concentration gradient, or electrical potential",
+        "Types include microfiltration, ultrafiltration, nanofiltration, and reverse osmosis",
+        "No phase change required — typically more energy-efficient than distillation for some separations"
+      ]
+    },
+    {
+      "number": 30,
+      "answer": "Packed Column",
+      "searchTags": ["packed column", "packed bed", "packing", "distillation column"],
+      "hints": [
+        "A vertical vessel filled with structured or random packing material to improve gas-liquid contact",
+        "Used in distillation, absorption, and stripping operations",
+        "Packing (Raschig rings, Pall rings, structured metal sheets) provides large surface area",
+        "Lower pressure drop than tray columns — preferred for vacuum distillation",
+        "Performance described by HETP (Height Equivalent to a Theoretical Plate)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,365 @@
+{
+  "section": "mechanical",
+  "terms": [
+    {
+      "number": 1,
+      "answer": "Torque",
+      "searchTags": ["torque", "moment", "rotational force"],
+      "hints": [
+        "A measure of a force's tendency to cause rotation",
+        "Car engines are rated by it — more of it means better acceleration from a stop",
+        "Calculated as force multiplied by the perpendicular distance from the pivot point",
+        "Measured in newton-metres (N·m) or foot-pounds (ft·lb)",
+        "Formula: τ = r × F, where r is the moment arm and F is the applied force"
+      ]
+    },
+    {
+      "number": 2,
+      "answer": "Stress",
+      "searchTags": ["stress", "mechanical stress", "normal stress"],
+      "hints": [
+        "An internal force per unit area within a material",
+        "What engineers calculate to check whether a part will break under load",
+        "Two main types: normal (perpendicular to surface) and shear (parallel)",
+        "Measured in pascals (Pa) or megapascals (MPa)",
+        "Formula: σ = F / A, where F is force and A is cross-sectional area"
+      ]
+    },
+    {
+      "number": 3,
+      "answer": "Resonance",
+      "searchTags": ["resonance", "natural frequency", "resonant frequency"],
+      "hints": [
+        "A phenomenon where a system vibrates at maximum amplitude",
+        "The Tacoma Narrows Bridge collapsed in 1940 partly because of it",
+        "Occurs when the driving frequency matches the system's natural frequency",
+        "Used intentionally in musical instruments to amplify sound",
+        "Engineers deliberately design structures to avoid it — or use dampers to suppress it"
+      ]
+    },
+    {
+      "number": 4,
+      "answer": "Fatigue",
+      "searchTags": ["fatigue", "metal fatigue", "fatigue failure", "cyclic loading"],
+      "hints": [
+        "A type of material failure caused by repeated loading and unloading",
+        "Responsible for roughly 80% of all mechanical failures in service",
+        "A crack starts small, grows invisibly with each cycle, then suddenly causes total fracture",
+        "The 1954 de Havilland Comet crashes were a landmark case of this failure mode",
+        "Characterized by an S-N (Wöhler) curve plotting stress amplitude vs cycles to failure"
+      ]
+    },
+    {
+      "number": 5,
+      "answer": "Thermodynamics",
+      "searchTags": ["thermodynamics", "thermo", "heat transfer", "entropy"],
+      "hints": [
+        "The branch of physics dealing with heat, work, and energy",
+        "Its laws govern everything from steam engines to refrigerators",
+        "The second law says entropy of an isolated system always increases",
+        "Four laws: zeroth (thermal equilibrium), first (energy conservation), second (entropy), third (absolute zero)",
+        "The Carnot cycle sets the theoretical maximum efficiency for a heat engine operating between two temperatures"
+      ]
+    },
+    {
+      "number": 6,
+      "answer": "Friction",
+      "searchTags": ["friction", "coefficient of friction", "kinetic friction", "static friction"],
+      "hints": [
+        "A force that resists relative motion between surfaces in contact",
+        "Without it, you couldn't walk, drive, or grip anything",
+        "Static type is greater than kinetic — it takes more force to start sliding than to keep sliding",
+        "Characterized by a dimensionless coefficient (μ) specific to each surface pair",
+        "Formula: F = μN, where N is the normal (perpendicular) force between the surfaces"
+      ]
+    },
+    {
+      "number": 7,
+      "answer": "Yield Strength",
+      "searchTags": ["yield strength", "yield stress", "elastic limit"],
+      "hints": [
+        "The stress at which a material begins to deform permanently",
+        "Below this point, remove the load and the part springs back to its original shape",
+        "Above it, the material plastically deforms — it won't return to its original dimensions",
+        "A key property engineers use to set safety margins for structural components",
+        "Identified on a stress-strain curve as the point where the linear (elastic) region ends"
+      ]
+    },
+    {
+      "number": 8,
+      "answer": "Gear Ratio",
+      "searchTags": ["gear ratio", "gear", "transmission ratio"],
+      "hints": [
+        "The relationship between the rotational speeds of two meshing gears",
+        "A bicycle's multiple gears are everyday examples of choosing it for different needs",
+        "A higher ratio multiplies torque but reduces output speed",
+        "Calculated as the number of teeth on the driven gear divided by the number on the drive gear",
+        "Used in transmissions to match engine speed to wheel speed across a range of driving conditions"
+      ]
+    },
+    {
+      "number": 9,
+      "answer": "Bernoulli's Principle",
+      "searchTags": ["bernoulli", "bernoulli principle", "bernoulli equation", "lift"],
+      "hints": [
+        "A fundamental concept in fluid dynamics",
+        "Explains why airplane wings generate lift",
+        "States that faster-moving fluid has lower pressure",
+        "Also explains the curveball in baseball and why shower curtains blow inward",
+        "Derived from conservation of energy: as fluid speeds up, its pressure drops to compensate"
+      ]
+    },
+    {
+      "number": 10,
+      "answer": "Strain",
+      "searchTags": ["strain", "deformation", "elongation"],
+      "hints": [
+        "A measure of deformation relative to original size",
+        "The companion quantity to stress — together they define how materials behave under load",
+        "Dimensionless — expressed as a ratio or percentage",
+        "Elastic strain is recoverable; plastic strain is permanent",
+        "Formula: ε = ΔL / L₀, where ΔL is the change in length and L₀ is the original length"
+      ]
+    },
+    {
+      "number": 11,
+      "answer": "Heat Exchanger",
+      "searchTags": ["heat exchanger", "radiator", "condenser", "heat transfer"],
+      "hints": [
+        "A device for transferring heat between two fluids without mixing them",
+        "Your car radiator is a simple example",
+        "Used in power plants, HVAC systems, and chemical refineries",
+        "Common designs include shell-and-tube, plate-and-frame, and finned tube",
+        "Effectiveness is measured by how closely the outlet temperatures approach each other relative to the inlet temperature difference"
+      ]
+    },
+    {
+      "number": 12,
+      "answer": "Moment of Inertia",
+      "searchTags": ["moment of inertia", "rotational inertia", "second moment of area"],
+      "hints": [
+        "A body's resistance to changes in rotational motion",
+        "The rotational analogue of mass in linear mechanics",
+        "Depends not just on how much mass an object has, but on how far that mass is from the axis of rotation",
+        "Why spinning figure skaters pull in their arms to spin faster — reducing it increases angular velocity",
+        "For a point mass: I = mr²; for extended bodies, it's the integral of r² dm over the whole object"
+      ]
+    },
+    {
+      "number": 13,
+      "answer": "Viscosity",
+      "searchTags": ["viscosity", "viscous", "fluid viscosity"],
+      "hints": [
+        "A fluid's resistance to flow",
+        "Honey has high viscosity; water has low viscosity",
+        "Lubricating oils are rated by it — engine oil labels like 10W-40 describe it at different temperatures",
+        "Dynamic viscosity is measured in pascal-seconds (Pa·s) or centipoise (cP)",
+        "Newtonian fluids have constant viscosity regardless of shear rate; non-Newtonian fluids (like ketchup) do not"
+      ]
+    },
+    {
+      "number": 14,
+      "answer": "Free Body Diagram",
+      "searchTags": ["free body diagram", "fbd", "force diagram"],
+      "hints": [
+        "A sketch showing all forces acting on an isolated object",
+        "The most fundamental tool in statics and dynamics",
+        "Forces shown include weight, normal force, friction, tension, and any applied loads",
+        "Drawing one is usually the first step in solving any mechanics problem",
+        "Once complete, Newton's second law (ΣF = ma) is applied to find unknowns"
+      ]
+    },
+    {
+      "number": 15,
+      "answer": "Cam",
+      "searchTags": ["cam", "cam mechanism", "camshaft"],
+      "hints": [
+        "A rotating or sliding piece that converts rotational motion into linear or oscillatory motion",
+        "Found in every internal combustion engine, controlling the intake and exhaust valves",
+        "Its profile (shape) determines the exact motion of the component it drives",
+        "The component it drives is called a follower",
+        "Cam timing in engines (valve timing) is critical to performance and is a major tuning parameter"
+      ]
+    },
+    {
+      "number": 16,
+      "answer": "Hooke's Law",
+      "searchTags": ["hooke's law", "hooke", "spring constant", "elasticity"],
+      "hints": [
+        "A fundamental law describing elastic behavior",
+        "States that deformation is proportional to the applied force — within limits",
+        "Named after 17th-century English scientist Robert Hooke",
+        "The constant of proportionality is called the spring constant (k)",
+        "Formula: F = kx, where F is force and x is displacement from equilibrium"
+      ]
+    },
+    {
+      "number": 17,
+      "answer": "Bearing",
+      "searchTags": ["bearing", "ball bearing", "roller bearing", "journal bearing"],
+      "hints": [
+        "A machine element that constrains relative motion between parts",
+        "Found in virtually every rotating machine — from skateboards to jet turbines",
+        "Reduces friction and supports loads between moving and stationary parts",
+        "Main types: ball, roller, tapered roller, and plain (sleeve) bearings",
+        "Selection depends on load direction (radial vs axial), speed, and environmental conditions"
+      ]
+    },
+    {
+      "number": 18,
+      "answer": "Pressure",
+      "searchTags": ["pressure", "fluid pressure", "gauge pressure"],
+      "hints": [
+        "Force per unit area",
+        "Measured in pascals (Pa), bar, psi, or atmospheres depending on context",
+        "Tyre pressure, blood pressure, and atmospheric pressure all refer to it",
+        "Gauge pressure is measured relative to atmospheric; absolute pressure is relative to vacuum",
+        "Formula: P = F / A — the same formula as normal stress, but applied to fluids"
+      ]
+    },
+    {
+      "number": 19,
+      "answer": "Power",
+      "searchTags": ["power", "mechanical power", "watt", "horsepower"],
+      "hints": [
+        "The rate at which work is done or energy is transferred",
+        "Car engines and electric motors are rated in it",
+        "Measured in watts (W) or horsepower (hp) — 1 hp ≈ 746 W",
+        "Higher values mean the same work is done in less time",
+        "Formula: P = W / t = F·v, where W is work, t is time, F is force, and v is velocity"
+      ]
+    },
+    {
+      "number": 20,
+      "answer": "Tolerance",
+      "searchTags": ["tolerance", "engineering tolerance", "dimensional tolerance", "fit"],
+      "hints": [
+        "The permissible range of variation in a physical dimension",
+        "Every machined part has these — nothing is made to a perfect single value",
+        "Too tight and manufacturing becomes impossibly expensive; too loose and parts don't function",
+        "Defined as the difference between upper and lower acceptable limits",
+        "ISO and ANSI systems define standard fits (clearance, interference, transition) using these"
+      ]
+    },
+    {
+      "number": 21,
+      "answer": "Weld",
+      "searchTags": ["weld", "welding", "fusion welding"],
+      "hints": [
+        "A permanent joint formed by fusing materials, usually metals, together",
+        "Done by melting the base material — sometimes with a filler rod added",
+        "Common processes: MIG, TIG, stick (SMAW), and spot welding",
+        "Quality is assessed by visual inspection, ultrasonic testing, or X-ray",
+        "The heat-affected zone (HAZ) around the joint changes the microstructure and can weaken or harden the material"
+      ]
+    },
+    {
+      "number": 22,
+      "answer": "Centripetal Force",
+      "searchTags": ["centripetal force", "centripetal", "circular motion"],
+      "hints": [
+        "The force directed toward the center of a circular path",
+        "Without it, an object moving in a circle would fly off in a straight line",
+        "What keeps satellites in orbit and cars on curved roads",
+        "Commonly confused with centrifugal force — which is a fictitious force in the rotating reference frame",
+        "Formula: F = mv²/r, where m is mass, v is speed, and r is the radius of curvature"
+      ]
+    },
+    {
+      "number": 23,
+      "answer": "Buckling",
+      "searchTags": ["buckling", "euler buckling", "column buckling"],
+      "hints": [
+        "A sudden sideways deflection of a slender structural element under compressive load",
+        "The failure mode that collapsed thin-walled columns long before the material reaches its yield strength",
+        "Why structural members are often made hollow or with I-shaped cross-sections rather than solid rods",
+        "Euler derived the critical load formula for columns in 1744",
+        "Critical load: P_cr = π²EI / (KL)², where E is Young's modulus, I is moment of inertia, L is length, K is end-condition factor"
+      ]
+    },
+    {
+      "number": 24,
+      "answer": "Efficiency",
+      "searchTags": ["efficiency", "mechanical efficiency", "thermal efficiency"],
+      "hints": [
+        "The ratio of useful output to total input",
+        "Always less than 100% — some energy is always lost, usually as heat",
+        "A car engine converts roughly 20–40% of fuel energy into motion; the rest is waste heat",
+        "Expressed as a percentage: (useful output / total input) × 100",
+        "The second law of thermodynamics sets an absolute ceiling called the Carnot efficiency"
+      ]
+    },
+    {
+      "number": 25,
+      "answer": "Fluid Mechanics",
+      "searchTags": ["fluid mechanics", "fluid dynamics", "hydrodynamics", "aerodynamics"],
+      "hints": [
+        "The branch of physics studying the behavior of liquids and gases",
+        "Covers everything from pipe flow to aircraft aerodynamics to ocean currents",
+        "Divided into fluid statics (at rest) and fluid dynamics (in motion)",
+        "The Navier-Stokes equations govern fluid motion — they're notoriously difficult to solve",
+        "Reynolds number predicts whether flow is laminar (smooth) or turbulent (chaotic)"
+      ]
+    },
+    {
+      "number": 26,
+      "answer": "Newton's Laws",
+      "searchTags": ["newton's laws", "newton", "laws of motion"],
+      "hints": [
+        "Three fundamental principles describing the relationship between forces and motion",
+        "First published in Principia Mathematica in 1687",
+        "First law: objects stay at rest or in motion unless acted on by a net force",
+        "Second law: F = ma — force equals mass times acceleration",
+        "Third law: for every action there is an equal and opposite reaction"
+      ]
+    },
+    {
+      "number": 27,
+      "answer": "Shaft",
+      "searchTags": ["shaft", "drive shaft", "rotating shaft", "axle"],
+      "hints": [
+        "A rotating machine element that transmits torque and motion",
+        "Found in virtually every mechanical drivetrain",
+        "Must be designed against torsion, bending, and fatigue failure",
+        "Key connections: keyways, splines, and press fits attach components like gears and pulleys to it",
+        "Critical speed — the rotational frequency that excites resonance — is a key design constraint"
+      ]
+    },
+    {
+      "number": 28,
+      "answer": "Material Science",
+      "searchTags": ["material science", "materials science", "metallurgy", "materials"],
+      "hints": [
+        "The interdisciplinary field studying the structure, properties, and processing of materials",
+        "Covers metals, ceramics, polymers, and composites",
+        "Microstructure — grain size, phase distribution — determines macroscopic mechanical properties",
+        "Heat treatment processes (annealing, quenching, tempering) alter material properties deliberately",
+        "The structure-property-processing-performance paradigm is its central framework"
+      ]
+    },
+    {
+      "number": 29,
+      "answer": "Spring",
+      "searchTags": ["spring", "coil spring", "compression spring", "torsion spring"],
+      "hints": [
+        "An elastic machine element that stores and releases mechanical energy",
+        "Found in everything from ballpoint pens to vehicle suspensions",
+        "Obeys Hooke's Law within its elastic range",
+        "Types include compression, extension, torsion, and leaf springs",
+        "Spring rate (stiffness, k) is the key design parameter — measured in N/m or lb/in"
+      ]
+    },
+    {
+      "number": 30,
+      "answer": "Hardness",
+      "searchTags": ["hardness", "mohs hardness", "rockwell hardness", "brinell"],
+      "hints": [
+        "A material's resistance to surface indentation or scratching",
+        "Not the same as strength — a material can be hard but brittle",
+        "Measured using standardized tests: Rockwell, Brinell, Vickers, and Mohs scales",
+        "High hardness improves wear resistance, which is why cutting tools are hardened",
+        "In metals, it correlates roughly with tensile strength — Brinell hardness × 3.45 ≈ UTS in MPa"
+      ]
+    }
+  ]
+}

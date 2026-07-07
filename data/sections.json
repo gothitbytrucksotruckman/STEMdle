@@ -1,0 +1,10 @@
+{
+  "sections": [
+    { "id": "cs", "label": "CS", "file": "cs.json" },
+    { "id": "mechanical", "label": "Mechanical", "file": "mechanical.json" },
+    { "id": "electro", "label": "Electro", "file": "electro.json" },
+    { "id": "civil", "label": "Civil", "file": "civil.json" },
+    { "id": "chem", "label": "Chem", "file": "chem.json" },
+    { "id": "true-engineer", "label": "True Engineer", "file": null, "merge": true }
+  ]
+}

@@ -1,5 +1,5 @@
-// STEMdle — Phase 2 client logic
-// ponytail: no persistence for guests. Stats only for logged-in users.
+// STEMdle — Static Site Version
+// Stats are saved to localStorage only.
 
 const EPOCH = Date.UTC(2025, 0, 1);
 
@@ -17,121 +17,121 @@ let currentTerm = null;
 let currentBank = [];
 let state = null;
 
-// --- Auth state ---
-let authToken = localStorage.getItem('stemdle_token') || null;
-let authUsername = localStorage.getItem('stemdle_username') || null;
-
 const $ = (id) => document.getElementById(id);
+
+// --- URL Routing ---
+function setUrlParam(key, value) {
+  const url = new URL(window.location);
+  if (value) {
+    url.searchParams.set(key, value);
+  } else {
+    url.searchParams.delete(key);
+  }
+  window.history.pushState({}, '', url);
+}
+
+function getUrlParam(key) {
+  const url = new URL(window.location);
+  return url.searchParams.get(key);
+}
 
 // --- View routing ---
 function showView(id) {
   document.querySelectorAll('.view').forEach((v) => v.classList.add('hidden'));
   $(id).classList.remove('hidden');
-}
 
-// --- Auth UI ---
-function updateHeaderAuth() {
-  if (authToken) {
-    $('header-username').textContent = `👤 ${authUsername}`;
-    $('header-username').classList.remove('hidden');
-    $('header-stats-btn').classList.remove('hidden');
-    $('header-logout-btn').classList.remove('hidden');
-    $('header-login-btn').classList.add('hidden');
-  } else {
-    $('header-username').classList.add('hidden');
-    $('header-stats-btn').classList.add('hidden');
-    $('header-logout-btn').classList.add('hidden');
-    $('header-login-btn').classList.remove('hidden');
+  // Clear URL params if going back to landing
+  if (id === 'view-landing') {
+    window.history.pushState({}, '', window.location.pathname);
+  } else if (id === 'view-stats') {
+    setUrlParam('view', 'stats');
   }
 }
 
-$('header-login-btn').addEventListener('click', () => {
-  $('auth-modal').classList.remove('hidden');
-  $('auth-error').classList.add('hidden');
-  $('auth-form').reset();
+window.addEventListener('popstate', () => {
+  // Handle browser back button
+  handleRoute();
 });
 
-$('auth-close-btn').addEventListener('click', () => $('auth-modal').classList.add('hidden'));
+// --- Stats (localStorage based) ---
+function getLocalStats() {
+  const data = localStorage.getItem('stemdle_results');
+  return data ? JSON.parse(data) : [];
+}
 
-$('auth-modal').addEventListener('click', (e) => {
-  if (e.target === $('auth-modal')) $('auth-modal').classList.add('hidden');
-});
+function saveLocalResult(sectionId, guesses, solved) {
+  const results = getLocalStats();
+  const date = new Date().toISOString().slice(0, 10);
 
-// Tab switching
-let authMode = 'login';
-document.querySelectorAll('.auth-tab').forEach((tab) => {
-  tab.addEventListener('click', () => {
-    authMode = tab.dataset.tab;
-    document.querySelectorAll('.auth-tab').forEach((t) => t.classList.remove('active'));
-    tab.classList.add('active');
-    $('auth-submit-btn').textContent = authMode === 'login' ? 'Sign in' : 'Register';
-    $('auth-error').classList.add('hidden');
-  });
-});
+  // Replay prevention isn't strictly enforced in static mode to allow replaying,
+  // but we can just save all results for stats.
+  results.push({ section: sectionId, date, guesses, solved: solved ? 1 : 0 });
+  localStorage.setItem('stemdle_results', JSON.stringify(results));
+}
 
-$('auth-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const username = $('auth-username').value.trim();
-  const password = $('auth-password').value;
-  $('auth-error').classList.add('hidden');
-
-  const res = await fetch(`/api/${authMode}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ username, password }),
-  });
-  const data = await res.json();
-
-  if (!res.ok) {
-    $('auth-error').textContent = data.error;
-    $('auth-error').classList.remove('hidden');
-    return;
-  }
-
-  authToken = data.token;
-  authUsername = data.username;
-  localStorage.setItem('stemdle_token', authToken);
-  localStorage.setItem('stemdle_username', authUsername);
-  $('auth-modal').classList.add('hidden');
-  updateHeaderAuth();
-});
-
-$('header-logout-btn').addEventListener('click', () => {
-  authToken = null;
-  authUsername = null;
-  localStorage.removeItem('stemdle_token');
-  localStorage.removeItem('stemdle_username');
-  updateHeaderAuth();
-  showView('view-landing');
-});
-
-// --- Stats ---
 $('header-stats-btn').addEventListener('click', () => showStats());
 $('stats-back-btn').addEventListener('click', () => showView('view-landing'));
 
-async function showStats() {
-  const res = await fetch('/api/stats', {
-    headers: { Authorization: `Bearer ${authToken}` },
+function showStats() {
+  const rows = getLocalStats().sort((a, b) => a.date.localeCompare(b.date));
+
+  const total = rows.length;
+  const solvedRows = rows.filter((r) => r.solved);
+  const solved = solvedRows.length;
+  const givenUp = total - solved;
+  const totalGuesses = solvedRows.reduce((s, r) => s + r.guesses, 0);
+  const avgGuesses = solved ? +(totalGuesses / solved).toFixed(2) : 0;
+  const best = solved ? Math.min(...solvedRows.map((r) => r.guesses)) : null;
+
+  // Streak logic
+  const solvedDates = new Set(solvedRows.map((r) => r.date));
+  let streak = 0, longest = 0, cur = 0;
+  const today = new Date().toISOString().slice(0, 10);
+  let d = new Date(today);
+  while (solvedDates.has(d.toISOString().slice(0, 10))) {
+    streak++;
+    d.setDate(d.getDate() - 1);
+  }
+
+  const sorted = [...solvedDates].sort();
+  sorted.forEach((date, i) => {
+    if (i === 0) { cur = 1; }
+    else {
+      const prev = new Date(sorted[i - 1]);
+      prev.setDate(prev.getDate() + 1);
+      cur = prev.toISOString().slice(0, 10) === date ? cur + 1 : 1;
+    }
+    if (cur > longest) longest = cur;
   });
-  if (!res.ok) return;
-  const s = await res.json();
+
+  // Per section
+  const perSection = {};
+  rows.forEach((r) => {
+    if (!perSection[r.section]) perSection[r.section] = { played: 0, solved: 0, totalGuesses: 0 };
+    perSection[r.section].played++;
+    if (r.solved) { perSection[r.section].solved++; perSection[r.section].totalGuesses += r.guesses; }
+  });
+  Object.values(perSection).forEach((s) => {
+    s.avgGuesses = s.solved ? +(s.totalGuesses / s.solved).toFixed(2) : 0;
+    delete s.totalGuesses;
+  });
 
   const content = $('stats-content');
   content.innerHTML = `
     <div class="stats-grid">
-      <div class="stat-box"><div class="stat-val">${s.total}</div><div class="stat-label">Played</div></div>
-      <div class="stat-box"><div class="stat-val">${s.solved}</div><div class="stat-label">Solved</div></div>
-      <div class="stat-box"><div class="stat-val">${s.givenUp}</div><div class="stat-label">Given up</div></div>
-      <div class="stat-box"><div class="stat-val">${s.avgGuesses || '—'}</div><div class="stat-label">Avg guesses</div></div>
-      <div class="stat-box"><div class="stat-val">${s.best ?? '—'}</div><div class="stat-label">Best</div></div>
-      <div class="stat-box"><div class="stat-val">${s.streak}</div><div class="stat-label">Streak 🔥</div></div>
-      <div class="stat-box"><div class="stat-val">${s.longest}</div><div class="stat-label">Longest streak</div></div>
+      <div class="stat-box"><div class="stat-val">${total}</div><div class="stat-label">Played</div></div>
+      <div class="stat-box"><div class="stat-val">${solved}</div><div class="stat-label">Solved</div></div>
+      <div class="stat-box"><div class="stat-val">${givenUp}</div><div class="stat-label">Given up</div></div>
+      <div class="stat-box"><div class="stat-val">${avgGuesses || '—'}</div><div class="stat-label">Avg guesses</div></div>
+      <div class="stat-box"><div class="stat-val">${best ?? '—'}</div><div class="stat-label">Best</div></div>
+      <div class="stat-box"><div class="stat-val">${streak}</div><div class="stat-label">Streak 🔥</div></div>
+      <div class="stat-box"><div class="stat-val">${longest}</div><div class="stat-label">Longest streak</div></div>
     </div>
-    ${Object.keys(s.perSection).length ? `
+    ${Object.keys(perSection).length ? `
       <h3 style="margin:1.5rem 0 0.75rem">Per section</h3>
       <table class="stats-table">
         <thead><tr><th>Section</th><th>Played</th><th>Solved</th><th>Avg</th></tr></thead>
-        <tbody>${Object.entries(s.perSection).map(([k, v]) =>
+        <tbody>${Object.entries(perSection).map(([k, v]) =>
           `<tr><td>${k}</td><td>${v.played}</td><td>${v.solved}</td><td>${v.avgGuesses || '—'}</td></tr>`
         ).join('')}</tbody>
       </table>` : ''}
@@ -202,6 +202,8 @@ async function showLevels(section) {
     list.appendChild(btn);
   });
 
+  setUrlParam('section', section.id);
+  setUrlParam('level', null); // clear level if we are just viewing the list
   showView('view-levels');
 }
 
@@ -219,6 +221,9 @@ async function startGame(section, term) {
   }
   currentTerm = term;
   state = { guesses: [], hintsShown: 1, solved: false, givenUp: false };
+
+  setUrlParam('section', section.id);
+  setUrlParam('level', term.number);
 
   // Show source section name for True Engineer mode, else just number
   const numLabel = term._section ? `(${term._section}) #${term.number}` : `#${term.number}`;
@@ -363,29 +368,44 @@ async function endRound() {
   $('result-answer').textContent = currentTerm.answer;
   showView('view-result');
 
-  // Save result for logged-in users
-  if (authToken) {
-    await fetch('/api/result', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${authToken}`,
-      },
-      body: JSON.stringify({
-        section: currentSection.id,
-        termNumber: currentTerm.number,
-        guesses: state.guesses.length,
-        solved: state.solved,
-      }),
-    }).catch(() => {}); // non-blocking, best-effort
-  }
+  // Save result locally
+  saveLocalResult(currentSection.id, state.guesses.length, state.solved);
 }
 
 // --- Nav ---
-$('back-btn').addEventListener('click', () => showView('view-levels'));
+$('back-btn').addEventListener('click', () => showLevels(currentSection));
 $('levels-back-btn').addEventListener('click', () => showView('view-landing'));
-$('play-again-btn').addEventListener('click', () => showView('view-levels'));
+$('play-again-btn').addEventListener('click', () => showLevels(currentSection));
+
+async function handleRoute() {
+  const view = getUrlParam('view');
+  if (view === 'stats') {
+    return showStats();
+  }
+
+  const sectionId = getUrlParam('section');
+  const levelNum = getUrlParam('level');
+
+  if (sectionId && sections.length > 0) {
+    const section = sections.find(s => s.id === sectionId);
+    if (section) {
+      if (levelNum) {
+        currentBank = await loadBank(section);
+        const term = currentBank.find(t => t.number == levelNum);
+        if (term) {
+          return startGame(section, term);
+        }
+      }
+      return showLevels(section);
+    }
+  }
+  showView('view-landing');
+}
 
 // --- Init ---
-updateHeaderAuth();
-loadSections();
+async function init() {
+  await loadSections();
+  handleRoute();
+}
+
+init();

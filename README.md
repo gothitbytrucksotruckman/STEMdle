@@ -1,4 +1,4 @@
-# STEMdle
+# STEMdle (Wordle game wanabe for Engineer Student)
 
 A daily engineering and computer science term guessing game. Like Wordle, but for STEM nerds.
 

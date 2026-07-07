@@ -16,7 +16,11 @@
 
 body {
   font-family: system-ui, -apple-system, sans-serif;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(189, 224, 254, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(189, 224, 254, 0.4) 1px, transparent 1px);
+  background-size: 20px 20px; /* size of the grid squares */
   color: var(--text);
   line-height: 1.5;
   display: flex;
@@ -43,6 +47,16 @@ header {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
+/* Menu button pinned top-left */
+#menu-btn {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.8rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  z-index: 202;
+}
+
 header .tagline {
   color: #caf0f8; /* Soft blue text inside header */
 }
@@ -53,7 +67,7 @@ footer {
   text-align: center;
   padding: 1.5rem 1rem;
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   margin-top: 2rem;
 }
 
@@ -70,7 +84,7 @@ h1 {
 }
 
 .view { animation: fade 0.2s ease; }
-.hidden { display: none; }
+.hidden { display: none !important; }
 
 @keyframes fade {
   from { opacity: 0; transform: translateY(4px); }
@@ -421,6 +435,64 @@ section {
   justify-content: center;
   margin-top: 0.4rem;
   flex-wrap: wrap;
+}
+
+/* --- Sidebar menu --- */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  animation: fade 0.2s ease;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  max-width: 80vw;
+  background: var(--card);
+  border-right: 1px solid var(--border);
+  box-shadow: 4px 0 12px -2px rgba(0, 0, 0, 0.15);
+  padding: 1.25rem 1rem;
+  z-index: 201;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar:not(.hidden) {
+  animation: slideInLeft 0.2s ease;
+}
+
+.sidebar h3 {
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.sidebar-link {
+  text-align: left;
+  padding: 0.75rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  color: var(--text);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sidebar-link:hover {
+  background: var(--hint);
+  color: var(--accent);
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
 }
 
 /* --- Stats --- */

@@ -69,7 +69,16 @@ function saveLocalResult(sectionId, guesses, solved) {
   localStorage.setItem('stemdle_results', JSON.stringify(results));
 }
 
-$('header-stats-btn').addEventListener('click', () => showStats());
+function toggleSidebar() {
+  const open = $('sidebar').classList.contains('hidden');
+  $('sidebar').classList.toggle('hidden', !open);
+  $('sidebar-overlay').classList.toggle('hidden', !open);
+  $('menu-btn').textContent = open ? '✕' : '☰';
+}
+
+$('menu-btn').addEventListener('click', toggleSidebar);
+$('sidebar-overlay').addEventListener('click', toggleSidebar);
+$('sidebar-stats-btn').addEventListener('click', () => { toggleSidebar(); showStats(); });
 $('stats-back-btn').addEventListener('click', () => showView('view-landing'));
 
 function showStats() {

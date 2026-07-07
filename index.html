@@ -8,12 +8,17 @@
 </head>
 <body>
   <header>
+    <button id="menu-btn" class="link-btn" aria-label="Open menu">☰</button>
     <h1>STEMdle</h1>
     <p class="tagline">Daily engineering &amp; CS term guessing game</p>
-    <div id="header-auth">
-      <button id="header-stats-btn" class="link-btn">Stats</button>
-    </div>
   </header>
+
+  <!-- Sidebar Menu -->
+  <div id="sidebar-overlay" class="sidebar-overlay hidden"></div>
+  <aside id="sidebar" class="sidebar hidden">
+    <h3>Menu</h3>
+    <button id="sidebar-stats-btn" class="sidebar-link">📊 Stats</button>
+  </aside>
 
   <!-- Landing / Mode Select -->
   <main id="view-landing" class="view">

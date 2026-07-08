@@ -43,7 +43,7 @@ Content is completely decoupled from game logic. To add new words:
 4. Save. The game will automatically include it in the daily rotation.
 
 # Inspiration
-Of course, this project isn't possible without inspiration from wordle. But the biggest inspiratioon that motivates me to create this project is [doctordle](doctordle.org). All mechanics are inspired by doctordle, with some custom tweaks to fit the STEM context.
+Of course, this project isn't possible without inspiration from wordle. But the biggest inspiratioon that motivates me to create this project is [doctordle](https://doctordle.org/). All mechanics are inspired by doctordle, with some custom tweaks to fit the STEM context.
 
 When I watched a doctor playing doctordle, I realized how much fun it is to play a word game with a mechanic similar to doctordle. This project is my attempt to bring that fun back to the STEM world.
 

@@ -1,94 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STEMdle</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <button id="menu-btn" class="link-btn" aria-label="Open menu">☰</button>
-    <h1>STEMdle</h1>
-    <p class="tagline">Daily engineering &amp; CS term guessing game</p>
-  </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>STEMdle</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <style>
+        body {
+            font-family: "Brush Script MT", cursive;
+        }
+    </style>
+    <body>
+        <!-- ponytail: SVG icon sprite — one defs block, referenced via <use href="#i-..."> -->
+        <svg style="display:none" aria-hidden="true">
+            <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+            </symbol>
+            <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </symbol>
+            <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="6" y1="20" x2="6" y2="14"/><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/>
+            </symbol>
+            <symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-1.5.5-2.5 1.5-3.5.3 1 .8 1.5 1.5 1.5 1 0 1.5-1 1.5-2.5C11.5 6 11 4.5 12 3z"/>
+            </symbol>
+            <symbol id="i-dice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <circle cx="8" cy="8" r="1.2" fill="currentColor" stroke="none"/><circle cx="16" cy="8" r="1.2" fill="currentColor" stroke="none"/>
+                <circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/>
+                <circle cx="8" cy="16" r="1.2" fill="currentColor" stroke="none"/><circle cx="16" cy="16" r="1.2" fill="currentColor" stroke="none"/>
+            </symbol>
+            <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11 V8 a4 4 0 0 1 8 0 v3"/>
+            </symbol>
+            <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+            </symbol>
+            <symbol id="i-xmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </symbol>
+        </svg>
+        <header>
+            <button id="menu-btn" class="link-btn" aria-label="Open menu">
+                <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+            </button>
+            <h1>STEMdle</h1>
+            <p class="tagline">Wordle wanabe for Engineering & CS</p>
+        </header>
 
-  <!-- Sidebar Menu -->
-  <div id="sidebar-overlay" class="sidebar-overlay hidden"></div>
-  <aside id="sidebar" class="sidebar hidden">
-    <h3>Menu</h3>
-    <button id="sidebar-stats-btn" class="sidebar-link">📊 Stats</button>
-  </aside>
+        <!-- Sidebar Menu -->
+        <div id="sidebar-overlay" class="sidebar-overlay hidden"></div>
+        <aside id="sidebar" class="sidebar hidden">
+            <h3>Menu</h3>
+            <button id="sidebar-stats-btn" class="sidebar-link">
+                <svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg> Stats
+            </button>
+        </aside>
 
-  <!-- Landing / Mode Select -->
-  <main id="view-landing" class="view">
-    <h2>Choose your discipline</h2>
-    <div id="section-buttons"></div>
-  </main>
+        <!-- Landing / Mode Select -->
+        <main id="view-landing" class="view">
+            <h2>Choose your discipline</h2>
+            <div id="section-buttons"></div>
+        </main>
 
-  <!-- Level Select -->
-  <main id="view-levels" class="view hidden">
-    <div class="game-header">
-      <button id="levels-back-btn" class="link-btn">&larr; Back</button>
-      <span id="levels-section-label"></span>
-    </div>
-    <div id="levels-list"></div>
-  </main>
+        <!-- Level Select -->
+        <main id="view-levels" class="view hidden">
+            <div class="game-header">
+                <button id="levels-back-btn" class="link-btn">
+                    &larr; Back
+                </button>
+                <span id="levels-section-label"></span>
+            </div>
+            <div id="levels-list"></div>
+        </main>
 
-  <!-- Game Screen -->
-  <main id="view-game" class="view hidden">
-    <div class="game-header">
-      <button id="back-btn" class="link-btn">&larr; Back</button>
-      <span id="puzzle-label"></span>
-    </div>
+        <!-- Game Screen -->
+        <main id="view-game" class="view hidden">
+            <div class="game-header">
+                <button id="back-btn" class="link-btn">&larr; Back</button>
+                <span id="puzzle-label"></span>
+            </div>
 
-    <section id="hint-panel">
-      <h3>Hints</h3>
-      <ol id="hints-list"></ol>
-    </section>
+            <section id="hint-panel">
+                <h3>Hints</h3>
+                <ol id="hints-list"></ol>
+            </section>
 
-    <section id="search-area">
-      <div class="search-input-group">
-        <input type="text" id="search-input" placeholder="Type to search terms..." autocomplete="off">
-        <button id="submit-guess-btn" class="accent-btn">Submit</button>
-      </div>
-      <div id="search-results"></div>
-      <button id="give-up-btn" class="danger-btn">Give Up</button>
-    </section>
+            <section id="search-area">
+                <div class="search-input-group">
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Type to search terms..."
+                        autocomplete="off"
+                    />
+                    <button id="submit-guess-btn" class="accent-btn">
+                        Submit
+                    </button>
+                </div>
+                <div id="search-results"></div>
+                <button id="give-up-btn" class="danger-btn">Give Up</button>
+            </section>
 
-    <section id="guess-history">
-      <h3>Guesses (<span id="guess-count">0</span>)</h3>
-      <ul id="guess-list"></ul>
-    </section>
-  </main>
+            <section id="guess-history">
+                <h3>Guesses (<span id="guess-count">0</span>)</h3>
+                <ul id="guess-list"></ul>
+            </section>
+        </main>
 
-  <!-- Result Screen -->
-  <main id="view-result" class="view hidden">
-    <h2 id="result-title"></h2>
-    <div id="result-answer"></div>
-    <div id="result-tier"></div>
-    <div id="result-detail"></div>
-    <div class="result-actions">
-      <button id="share-btn" class="accent-btn">Share</button>
-      <button id="play-again-btn" class="outline-btn">Pick another level</button>
-    </div>
-  </main>
+        <!-- Result Screen -->
+        <main id="view-result" class="view hidden">
+            <h2 id="result-title"></h2>
+            <div id="result-answer"></div>
+            <div id="result-tier"></div>
+            <div id="result-detail"></div>
+            <div class="result-actions">
+                <button id="share-btn" class="accent-btn">Share</button>
+                <button id="play-again-btn" class="outline-btn">
+                    Pick another level
+                </button>
+            </div>
+        </main>
 
-  <!-- Stats Screen -->
-  <main id="view-stats" class="view hidden">
-    <div class="game-header">
-      <button id="stats-back-btn" class="link-btn">&larr; Back</button>
-      <span>My Stats</span>
-    </div>
-    <div id="stats-content"></div>
-  </main>
+        <!-- Stats Screen -->
+        <main id="view-stats" class="view hidden">
+            <div class="game-header">
+                <button id="stats-back-btn" class="link-btn">
+                    &larr; Back
+                </button>
+                <span>My Stats</span>
+            </div>
+            <div id="stats-content"></div>
+        </main>
 
-  <footer>
-    <p>STEMdle &copy; 2026. A daily engineering & CS term guessing game.</p>
-  </footer>
+        <footer>
+            <p>STEMdle &copy; 2026. Developed by Rangga Arsandy.</p>
+        </footer>
 
-  <div id="toast" class="toast hidden">Copied to clipboard</div>
+        <div id="toast" class="toast hidden">Copied to clipboard</div>
 
-  <script src="app.js"></script>
-</body>
+        <script src="app.js"></script>
+    </body>
 </html>

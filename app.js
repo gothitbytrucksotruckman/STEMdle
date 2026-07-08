@@ -19,6 +19,9 @@ let state = null;
 
 const $ = (id) => document.getElementById(id);
 
+// ponytail: inline SVG icon helper — uses the #i-* sprite defs in index.html
+const icon = (name) => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
+
 // --- URL Routing ---
 function setUrlParam(key, value) {
   const url = new URL(window.location);
@@ -73,7 +76,7 @@ function toggleSidebar() {
   const open = $('sidebar').classList.contains('hidden');
   $('sidebar').classList.toggle('hidden', !open);
   $('sidebar-overlay').classList.toggle('hidden', !open);
-  $('menu-btn').textContent = open ? '✕' : '☰';
+  $('menu-btn').innerHTML = open ? icon('x') : icon('menu');
 }
 
 $('menu-btn').addEventListener('click', toggleSidebar);
@@ -133,7 +136,7 @@ function showStats() {
       <div class="stat-box"><div class="stat-val">${givenUp}</div><div class="stat-label">Given up</div></div>
       <div class="stat-box"><div class="stat-val">${avgGuesses || '—'}</div><div class="stat-label">Avg guesses</div></div>
       <div class="stat-box"><div class="stat-val">${best ?? '—'}</div><div class="stat-label">Best</div></div>
-      <div class="stat-box"><div class="stat-val">${streak}</div><div class="stat-label">Streak 🔥</div></div>
+      <div class="stat-box"><div class="stat-val">${streak}</div><div class="stat-label">Streak ${icon('flame')}</div></div>
       <div class="stat-box"><div class="stat-val">${longest}</div><div class="stat-label">Longest streak</div></div>
     </div>
     ${Object.keys(perSection).length ? `
@@ -196,7 +199,7 @@ async function showLevels(section) {
 
   const randomBtn = document.createElement('button');
   randomBtn.className = 'level-random-btn';
-  randomBtn.textContent = '🎲 Random level';
+  randomBtn.innerHTML = icon('dice') + ' Random level';
   randomBtn.onclick = () => {
     const pick = currentBank[Math.floor(Math.random() * currentBank.length)];
     startGame(section, pick);
@@ -258,7 +261,7 @@ function renderHints() {
     if (i < state.hintsShown) {
       li.textContent = currentTerm.hints[i];
     } else {
-      li.textContent = '🔒 Locked — Guess to reveal';
+      li.innerHTML = icon('lock') + ' Locked — Guess to reveal';
       li.classList.add('locked-hint');
     }
     list.appendChild(li);
@@ -347,9 +350,9 @@ function submitGuess(answer) {
 function addGuessLog(answer, correct, revealedHint) {
   const li = document.createElement('li');
   if (correct) {
-    li.innerHTML = `<span style="color:var(--accent)">${answer} ✓</span>`;
+    li.innerHTML = `<span style="color:var(--accent)">${answer} ${icon('check')}</span>`;
   } else {
-    li.innerHTML = `<span class="wrong">${answer} ✗</span>${
+    li.innerHTML = `<span class="wrong">${answer} ${icon('xmark')}</span>${
       revealedHint ? `<span class="hint-tag">+ Hint ${state.hintsShown}</span>` : ''
     }`;
   }
@@ -386,12 +389,12 @@ async function endRound() {
       const g = state.guesses.length;
       let grid = '';
       for (let i = 1; i <= 5; i++) {
-        if (i < g) grid += `Hint ${i}: ❌\n`;
-        else if (i === g) grid += `Hint ${i}: ✅ (${g} guesses)\n`;
+        if (i < g) grid += `Hint ${i}: X\n`;
+        else if (i === g) grid += `Hint ${i}: ✓ (${g} guesses)\n`;
       }
       if (g > 5) grid += `...and ${g - 5} more guesses\n`;
       const numLabel = currentTerm._section ? `(${currentTerm._section}) #${currentTerm.number}` : `#${currentTerm.number}`;
-      const text = `STEMdle — ${currentSection.label} ${numLabel}\n${grid}⭐ ${tierObj.label}\nstemdle.app`;
+      const text = `STEMdle — ${currentSection.label} ${numLabel}\n${grid}★ ${tierObj.label}\nstemdle.app`;
       navigator.clipboard.writeText(text);
 
       const toast = $('toast');

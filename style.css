@@ -408,6 +408,13 @@ section {
   background: var(--hint);
 }
 
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  display: inline;
+}
+
 .toast {
   position: fixed;
   bottom: 2rem;

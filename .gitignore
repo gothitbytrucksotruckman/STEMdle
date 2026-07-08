@@ -3,3 +3,4 @@ stemdle.db
 stemdle.db-journal
 .env
 .DS_Store
+.agents\skills/

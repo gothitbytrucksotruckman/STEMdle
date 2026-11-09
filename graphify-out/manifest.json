@@ -1,0 +1,82 @@
+{
+  ".claude/settings.local.json": {
+    "mtime": 1783398583.7052293,
+    "ast_hash": "10483a3d27ac352209faa4bd0a6a151c",
+    "semantic_hash": "10483a3d27ac352209faa4bd0a6a151c"
+  },
+  "app.js": {
+    "mtime": 1783492307.65487,
+    "ast_hash": "8b985d44b37669702038c071bca329b5",
+    "semantic_hash": "8b985d44b37669702038c071bca329b5"
+  },
+  "data/chem.json": {
+    "mtime": 1783403280.9175239,
+    "ast_hash": "83ad685e4a8c47a90c5a6a52697cf26f",
+    "semantic_hash": "83ad685e4a8c47a90c5a6a52697cf26f"
+  },
+  "data/civil.json": {
+    "mtime": 1783403279.3198001,
+    "ast_hash": "be5ead411179af7b3319e37eaab872a5",
+    "semantic_hash": "be5ead411179af7b3319e37eaab872a5"
+  },
+  "data/cs.json": {
+    "mtime": 1783400596.8662896,
+    "ast_hash": "ac967c1fcfd83040a250877c52024a01",
+    "semantic_hash": "ac967c1fcfd83040a250877c52024a01"
+  },
+  "data/electro.json": {
+    "mtime": 1783403277.878303,
+    "ast_hash": "42a9f6edbcc8cd53dbe4a37dee483c56",
+    "semantic_hash": "42a9f6edbcc8cd53dbe4a37dee483c56"
+  },
+  "data/mechanical.json": {
+    "mtime": 1783400598.2695782,
+    "ast_hash": "c9dbd12412f80238fb5e3f7c5e6bf68c",
+    "semantic_hash": "c9dbd12412f80238fb5e3f7c5e6bf68c"
+  },
+  "data/sections.json": {
+    "mtime": 1783404151.8907223,
+    "ast_hash": "5244fde03fdee5b2f12e2cbca1c6b0a0",
+    "semantic_hash": "5244fde03fdee5b2f12e2cbca1c6b0a0"
+  },
+  "package.json": {
+    "mtime": 1783408900.5362313,
+    "ast_hash": "66a308738a0fefef8a120295bf1f23d0",
+    "semantic_hash": "66a308738a0fefef8a120295bf1f23d0"
+  },
+  "server.js": {
+    "mtime": 1783421987.6717615,
+    "ast_hash": "f56a064325387d8d614e24c3ca4c49b5",
+    "semantic_hash": "f56a064325387d8d614e24c3ca4c49b5"
+  },
+  "skills-lock.json": {
+    "mtime": 1783490577.2601485,
+    "ast_hash": "22225578200d99a31d7445d5076113b5",
+    "semantic_hash": "22225578200d99a31d7445d5076113b5"
+  },
+  "README.md": {
+    "mtime": 1783498580.4947016,
+    "ast_hash": "12dcf11e1b0091e951cabbfaad4df46e",
+    "semantic_hash": "12dcf11e1b0091e951cabbfaad4df46e"
+  },
+  "index.html": {
+    "mtime": 1783679305.7399633,
+    "ast_hash": "07c33bf2ffdf5921f978383c8c6dec5b",
+    "semantic_hash": "07c33bf2ffdf5921f978383c8c6dec5b"
+  },
+  "stemdle-prd-v3.md": {
+    "mtime": 1783398536.2698495,
+    "ast_hash": "f69214edd84f336764c32d51ba52469a",
+    "semantic_hash": "f69214edd84f336764c32d51ba52469a"
+  },
+  "assets/html logo.png": {
+    "mtime": 1783529502.820864,
+    "ast_hash": "ec148dd850536e2496c27d19281c0e80",
+    "semantic_hash": "ec148dd850536e2496c27d19281c0e80"
+  },
+  "assets/logo stemdle fixed.png": {
+    "mtime": 1783530933.842471,
+    "ast_hash": "873e184a12e06d7a3870374b156aeb72",
+    "semantic_hash": "873e184a12e06d7a3870374b156aeb72"
+  }
+}

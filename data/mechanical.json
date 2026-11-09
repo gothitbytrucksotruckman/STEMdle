@@ -360,6 +360,246 @@
         "High hardness improves wear resistance, which is why cutting tools are hardened",
         "In metals, it correlates roughly with tensile strength — Brinell hardness × 3.45 ≈ UTS in MPa"
       ]
+    },
+    {
+      "number": 31,
+      "answer": "Entropy",
+      "searchTags": ["entropy", "disorder", "second law"],
+      "hints": [
+        "A property that quantifies how energy is spread out in a system",
+        "Often loosely described as a measure of disorder",
+        "In any isolated system, it never decreases",
+        "Its tendency to increase gives time a direction and sets a limit on engine efficiency",
+        "A thermodynamic property (symbol S, units J/K) at the heart of the second law; it measures how much energy is unavailable for useful work"
+      ]
+    },
+    {
+      "number": 32,
+      "answer": "Carnot Cycle",
+      "searchTags": ["carnot cycle", "carnot", "carnot engine", "ideal heat engine"],
+      "hints": [
+        "A theoretical sequence of steps, never achieved in real machines",
+        "Named after a French physicist who studied the limits of steam engines",
+        "Consists of two isothermal and two adiabatic processes",
+        "Its efficiency depends only on the hot and cold reservoir temperatures: 1 − Tc/Th",
+        "The idealised reversible heat-engine cycle that sets the maximum possible efficiency between two temperatures"
+      ]
+    },
+    {
+      "number": 33,
+      "answer": "Conduction",
+      "searchTags": ["conduction", "heat conduction", "fourier's law", "thermal conductivity"],
+      "hints": [
+        "One of three ways heat travels",
+        "Needs direct contact — no moving fluid and no radiation",
+        "Metals do it well; foam, wool and air are poor at it",
+        "Described by Fourier's law: heat flow is proportional to the temperature gradient",
+        "Heat transfer through a solid (or between touching bodies) by particle vibration and electron movement, governed by thermal conductivity"
+      ]
+    },
+    {
+      "number": 34,
+      "answer": "Convection",
+      "searchTags": ["convection", "natural convection", "forced convection", "heat transfer"],
+      "hints": [
+        "A heat transfer mode that requires something to flow",
+        "Happens only in liquids and gases, never in a solid",
+        "A radiator warms a room using it; so does a fan-assisted oven",
+        "Can be natural, driven by density differences, or forced, driven by a fan or pump",
+        "Heat transfer by bulk movement of a fluid, quantified by Newton's law of cooling with a heat transfer coefficient h"
+      ]
+    },
+    {
+      "number": 35,
+      "answer": "Reynolds Number",
+      "searchTags": ["reynolds number", "reynolds", "re", "laminar", "turbulent"],
+      "hints": [
+        "A dimensionless number engineers calculate before choosing a pipe size",
+        "Compares two competing effects inside a moving fluid",
+        "Low values mean smooth layers; high values mean chaotic swirling",
+        "In a pipe, roughly 2,300 marks the transition between laminar and turbulent flow",
+        "Dimensionless ratio of inertial to viscous forces, Re = ρvD/μ, used to predict the flow regime"
+      ]
+    },
+    {
+      "number": 36,
+      "answer": "Pump",
+      "searchTags": ["pump", "centrifugal pump", "positive displacement"],
+      "hints": [
+        "A machine that adds energy to a fluid",
+        "Driven by a motor, it moves liquids from low to high pressure or elevation",
+        "Centrifugal and positive-displacement types are the two major families",
+        "Performance is shown on a curve of head versus flow rate, and running it dry or letting it cavitate destroys it",
+        "A mechanical device that moves liquids by adding pressure or flow, such as a centrifugal or reciprocating pump"
+      ]
+    },
+    {
+      "number": 37,
+      "answer": "Turbine",
+      "searchTags": ["turbine", "gas turbine", "steam turbine", "wind turbine"],
+      "hints": [
+        "A rotating machine that extracts energy from something flowing past it",
+        "Blades are pushed by a moving fluid, spinning a shaft",
+        "Found in jet engines, hydroelectric dams and wind farms",
+        "Spins a generator at power stations, driven by steam, gas, water or wind",
+        "A rotary machine converting the kinetic or thermal energy of a fluid into mechanical work; the reverse of a compressor"
+      ]
+    },
+    {
+      "number": 38,
+      "answer": "Compressor",
+      "searchTags": ["compressor", "air compressor", "compression"],
+      "hints": [
+        "A machine that squeezes a gas into a smaller space",
+        "Raises the pressure of a gas by doing work on it",
+        "Sits at the heart of refrigerators, air conditioners and jet engines",
+        "Can be reciprocating, rotary screw or centrifugal, and the compressed gas gets hot",
+        "A mechanical device that increases the pressure of a gas by reducing its volume — the mirror image of a turbine"
+      ]
+    },
+    {
+      "number": 39,
+      "answer": "Internal Combustion Engine",
+      "searchTags": ["internal combustion engine", "combustion engine", "ic engine", "petrol engine", "diesel engine", "piston engine"],
+      "hints": [
+        "The power source behind most cars for over a century",
+        "Burns fuel inside the machine itself, rather than in an external boiler",
+        "Pistons move up and down in cylinders, turning a crankshaft",
+        "Petrol versions follow the four-stroke intake, compression, power, exhaust sequence",
+        "A heat engine where fuel combustion occurs in a combustion chamber inside the engine; gasoline (Otto) and diesel versions are the most common"
+      ]
+    },
+    {
+      "number": 40,
+      "answer": "Flywheel",
+      "searchTags": ["flywheel", "energy storage"],
+      "hints": [
+        "A heavy rotating component found in many engines and machines",
+        "Stores energy in the form of rotation",
+        "Smooths out the jerky pulses of a piston engine, giving steady output",
+        "Its stored energy depends on its moment of inertia and the square of its speed",
+        "A heavy rotating disc that stores kinetic energy and smooths out torque pulses; used in engines and some grid-storage systems"
+      ]
+    },
+    {
+      "number": 41,
+      "answer": "Clutch",
+      "searchTags": ["clutch", "friction clutch", "clutch plate"],
+      "hints": [
+        "A device that decides when power is connected",
+        "Lets two rotating shafts be joined or separated",
+        "Pressing a pedal in a manual car operates it",
+        "Relies on friction between plates, which wear down over time",
+        "A mechanical coupling that engages and disengages the engine from the transmission, allowing smooth starts and gear changes"
+      ]
+    },
+    {
+      "number": 42,
+      "answer": "Lubrication",
+      "searchTags": ["lubrication", "lubricant", "oil", "grease"],
+      "hints": [
+        "A maintenance practice that every moving part depends on",
+        "Introduces a thin film between surfaces that would otherwise touch",
+        "Reduces wear, noise and wasted energy, and helps carry heat away",
+        "Done with oil, grease or solid films like graphite; a film that is too thin leads to seizure",
+        "The use of a lubricant between moving surfaces to reduce friction and wear, as in bearings and engines"
+      ]
+    },
+    {
+      "number": 43,
+      "answer": "Young's Modulus",
+      "searchTags": ["young's modulus", "youngs modulus", "elastic modulus", "modulus of elasticity", "stiffness"],
+      "hints": [
+        "A number that tells you how stiff a material is",
+        "Steel has a much higher one than rubber or aluminium",
+        "Measured as the slope of the straight, elastic portion of a stress–strain curve",
+        "Units are pascals, typically GPa for metals; about 200 for steel",
+        "The ratio of tensile stress to tensile strain in the elastic region (E = σ/ε), also called the elastic modulus"
+      ]
+    },
+    {
+      "number": 44,
+      "answer": "Ductility",
+      "searchTags": ["ductility", "ductile", "drawn into wire"],
+      "hints": [
+        "A material property valued by designers who want warning before something breaks",
+        "Describes how much a material can stretch before it fractures",
+        "Copper and mild steel have lots of it; glass and cast iron have little",
+        "Allows metal to be drawn into wire and shows up as necking in a tensile test",
+        "The ability of a material to undergo large plastic deformation under tensile stress before breaking; the opposite of brittleness"
+      ]
+    },
+    {
+      "number": 45,
+      "answer": "Creep",
+      "searchTags": ["creep", "creep deformation", "time-dependent"],
+      "hints": [
+        "A slow failure mode that needs no extra load, only patience",
+        "Deformation that grows with time under constant stress",
+        "Becomes serious at high temperatures, such as in turbine blades and boiler tubes",
+        "Lead roofing and solder show it even at room temperature; it is usually split into primary, secondary and tertiary stages",
+        "Time-dependent permanent deformation of a material held under constant load, especially at elevated temperature"
+      ]
+    },
+    {
+      "number": 46,
+      "answer": "Annealing",
+      "searchTags": ["annealing", "anneal", "heat treatment"],
+      "hints": [
+        "A heat treatment that makes metals easier to work with",
+        "The metal is heated, held at temperature, then cooled slowly",
+        "Relieves internal stresses and refines the grain structure",
+        "Reverses the hardening caused by cold working, and softens the material",
+        "A heat treatment in which a metal is heated above its recrystallisation temperature and slowly cooled to increase ductility and reduce hardness"
+      ]
+    },
+    {
+      "number": 47,
+      "answer": "Casting",
+      "searchTags": ["casting", "die casting", "sand casting", "foundry"],
+      "hints": [
+        "One of humanity's oldest manufacturing methods, still used worldwide",
+        "Liquid material is poured into a cavity shaped like the final part",
+        "Sand, investment and die are common mould types",
+        "Engine blocks, pipes and bells are made this way, and defects like porosity and shrinkage voids can occur",
+        "A manufacturing process where molten metal is poured into a mould and allowed to solidify into the desired shape"
+      ]
+    },
+    {
+      "number": 48,
+      "answer": "CNC Machining",
+      "searchTags": ["cnc", "cnc machining", "cnc machine", "milling", "lathe"],
+      "hints": [
+        "Manufacturing where software replaces the hand on the wheel",
+        "Material is removed from a solid block until only the part remains",
+        "A computer follows coded instructions, often G-code, to move cutting tools precisely",
+        "Mills, lathes and routers are common machines, and it is a subtractive process unlike 3D printing",
+        "Computer Numerical Control machining — automated subtractive manufacturing that cuts parts from stock using programmed tool paths"
+      ]
+    },
+    {
+      "number": 49,
+      "answer": "Kinematics",
+      "searchTags": ["kinematics", "motion analysis", "mechanisms"],
+      "hints": [
+        "A branch of mechanics concerned with describing motion",
+        "Studies position, velocity and acceleration over time",
+        "Forces and mass are deliberately left out — that is the job of kinetics and dynamics",
+        "Used to analyse robot arms, linkages and mechanisms; forward and inverse versions exist",
+        "The geometry of motion: describing position, velocity and acceleration without reference to forces, as in the SUVAT equations"
+      ]
+    },
+    {
+      "number": 50,
+      "answer": "Damping",
+      "searchTags": ["damping", "damper", "shock absorber", "dampen"],
+      "hints": [
+        "Why a pushed swing eventually stops swinging",
+        "Removes energy from an oscillating system, shrinking its swings",
+        "Car suspensions use dedicated parts to provide it, so bumps don't make the car bounce for ages",
+        "Described by a ratio: underdamped systems overshoot, critically damped ones return fastest without overshoot",
+        "The dissipation of energy in a vibrating system through friction or viscous effects, reducing oscillation amplitude; shock absorbers are common examples"
+      ]
     }
   ]
 }

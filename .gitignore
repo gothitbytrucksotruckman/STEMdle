@@ -4,3 +4,4 @@ stemdle.db-journal
 .env
 .DS_Store
 .agents\skills/
+TODO-levels.md

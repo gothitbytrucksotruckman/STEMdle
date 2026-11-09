@@ -360,6 +360,246 @@
         "Operating systems provide it — you call 'open file' without knowing the disk sectors involved",
         "Reduces cognitive load by letting programmers work at a higher level without worrying about lower-level mechanics"
       ]
+    },
+    {
+      "number": 31,
+      "answer": "Queue",
+      "searchTags": ["queue", "fifo", "enqueue", "dequeue"],
+      "hints": [
+        "A linear collection where order of arrival matters",
+        "Items are added at one end and removed from the opposite end",
+        "Real-world analogy: people waiting in line at a ticket counter",
+        "Follows first-in, first-out ordering — the opposite of a stack",
+        "Core operations are enqueue and dequeue; used in task scheduling and breadth-first search"
+      ]
+    },
+    {
+      "number": 32,
+      "answer": "Binary Tree",
+      "searchTags": ["binary tree", "bst", "tree", "binary search tree"],
+      "hints": [
+        "A hierarchical data structure with a single starting point at the top",
+        "Each element links to at most two children, usually called left and right",
+        "A search variant keeps smaller values on the left and larger values on the right",
+        "Traversal orders include in-order, pre-order and post-order",
+        "A tree where every node has at most two children; balanced versions like AVL and red-black trees give O(log n) lookups"
+      ]
+    },
+    {
+      "number": 33,
+      "answer": "Graph",
+      "searchTags": ["graph", "graph theory", "nodes and edges", "vertices"],
+      "hints": [
+        "A way of modelling things and the relationships between them",
+        "Made up of points and the links that connect them",
+        "Social networks, road maps and the web itself are all examples",
+        "Can be directed or undirected, weighted or unweighted",
+        "A data structure of vertices connected by edges, stored as an adjacency list or matrix and explored with BFS or DFS"
+      ]
+    },
+    {
+      "number": 34,
+      "answer": "Heap",
+      "searchTags": ["heap", "priority queue", "min heap", "max heap", "binary heap"],
+      "hints": [
+        "A tree-based structure that keeps one extreme value instantly accessible",
+        "The smallest (or largest) element always sits at the top",
+        "Usually stored compactly in an array, with parent and child positions found by index arithmetic",
+        "Powers priority queues and a sorting algorithm that shares its name",
+        "A complete binary tree satisfying the heap property; insertion and removal take O(log n)"
+      ]
+    },
+    {
+      "number": 35,
+      "answer": "Dynamic Programming",
+      "searchTags": ["dynamic programming", "dp", "memoization", "tabulation"],
+      "hints": [
+        "An approach to solving big problems by breaking them down",
+        "Works when the same smaller subproblems appear again and again",
+        "Stores the results of those subproblems so they are never recomputed",
+        "Classic examples: Fibonacci with a lookup table, the knapsack problem, shortest edit distance",
+        "Optimisation technique combining overlapping subproblems and optimal substructure, using memoization (top-down) or tabulation (bottom-up)"
+      ]
+    },
+    {
+      "number": 36,
+      "answer": "Dijkstra's Algorithm",
+      "searchTags": ["dijkstra", "dijkstra's algorithm", "dijkstras algorithm", "shortest path"],
+      "hints": [
+        "A famous method for finding routes through a network",
+        "Named after a Dutch computer scientist, who devised it in 1956",
+        "Repeatedly picks the closest unvisited point and updates distances to its neighbours",
+        "Powers map navigation, but fails when connections can have negative costs",
+        "Finds the shortest path from a source node to all others in a weighted graph with non-negative edges, typically using a priority queue"
+      ]
+    },
+    {
+      "number": 37,
+      "answer": "Polymorphism",
+      "searchTags": ["polymorphism", "overriding", "overloading", "oop"],
+      "hints": [
+        "A principle that lets different things be used through the same interface",
+        "Calling the same method on different objects can produce different behaviour",
+        "A list of shapes can each be asked to draw themselves, without the caller knowing which shape is which",
+        "Comes in compile-time (overloading) and runtime (overriding) flavours",
+        "An OOP concept where objects of different classes respond to the same method call in class-specific ways, from the Greek for 'many forms'"
+      ]
+    },
+    {
+      "number": 38,
+      "answer": "Inheritance",
+      "searchTags": ["inheritance", "subclass", "superclass", "extends", "parent class"],
+      "hints": [
+        "A mechanism for building new things from existing ones",
+        "A child class automatically gains the fields and methods of its parent",
+        "Models 'is-a' relationships, such as a Dog being an Animal",
+        "Overused versions lead to deep hierarchies; many developers say to prefer composition instead",
+        "An OOP mechanism where a subclass reuses and extends the behaviour of a superclass, often written with the extends keyword"
+      ]
+    },
+    {
+      "number": 39,
+      "answer": "Object-Oriented Programming",
+      "searchTags": ["oop", "object oriented programming", "object-oriented", "classes", "objects"],
+      "hints": [
+        "A paradigm for organising code around things rather than steps",
+        "Bundles data and the functions that operate on that data together",
+        "Its four classic pillars are encapsulation, abstraction, inheritance and polymorphism",
+        "Java, C++ and Python all support this style, built around classes and instances",
+        "Often abbreviated OOP; programs are modelled as interacting objects that hold state and expose methods"
+      ]
+    },
+    {
+      "number": 40,
+      "answer": "Primary Key",
+      "searchTags": ["primary key", "pk", "unique identifier", "database key"],
+      "hints": [
+        "A column that every row in a table depends on for its identity",
+        "Its values must be unique — two rows can never share one",
+        "It can never be empty (NULL)",
+        "Other tables point to it using a foreign key to create relationships",
+        "A column or set of columns that uniquely identifies each record in a relational table, often an auto-incrementing integer or a UUID"
+      ]
+    },
+    {
+      "number": 41,
+      "answer": "Database Index",
+      "searchTags": ["index", "database index", "indexing", "b-tree index"],
+      "hints": [
+        "An extra structure that exists purely to make reads faster",
+        "Works like the alphabetical listing at the back of a textbook",
+        "Speeds up lookups at the cost of slower writes and extra storage",
+        "Usually implemented as a B-tree, and often created on columns used in WHERE clauses",
+        "A database structure (created with CREATE INDEX) that lets queries find rows without scanning the entire table"
+      ]
+    },
+    {
+      "number": 42,
+      "answer": "Normalization",
+      "searchTags": ["normalization", "normalisation", "normal forms", "3nf"],
+      "hints": [
+        "A design discipline for organising data into well-structured tables",
+        "Aims to remove redundancy so each fact is stored in just one place",
+        "Prevents update, insert and delete anomalies",
+        "Progresses through stages known as 1NF, 2NF, 3NF and BCNF",
+        "The process of structuring a relational database into normal forms to reduce duplication and improve integrity"
+      ]
+    },
+    {
+      "number": 43,
+      "answer": "Process",
+      "searchTags": ["process", "program in execution", "pid"],
+      "hints": [
+        "Something an operating system creates when you launch an application",
+        "Has its own private memory space, separate from every other one",
+        "Identified by a numeric ID, and can be listed in a task manager",
+        "Heavier than a thread, because it does not share an address space by default",
+        "A running instance of a program, with its own address space, resources and PID, managed by the OS scheduler"
+      ]
+    },
+    {
+      "number": 44,
+      "answer": "Mutex",
+      "searchTags": ["mutex", "lock", "mutual exclusion", "semaphore"],
+      "hints": [
+        "A tool for keeping concurrent code from stepping on its own toes",
+        "Only one holder at a time; everyone else must wait their turn",
+        "Guards a critical section of code or a shared resource",
+        "Forgetting to release it can lead to a deadlock",
+        "Short for 'mutual exclusion' — a lock that ensures only one thread can access shared data at a time"
+      ]
+    },
+    {
+      "number": 45,
+      "answer": "Virtual Memory",
+      "searchTags": ["virtual memory", "paging", "swap", "page file"],
+      "hints": [
+        "An illusion created by the operating system and hardware together",
+        "Makes a program believe it owns a huge, continuous block of space",
+        "Splits data into fixed-size pages that can live in RAM or be parked on disk",
+        "When RAM runs short, unused pages are swapped out — and too much of this causes thrashing",
+        "A technique that maps virtual addresses to physical RAM via page tables, letting programs use more memory than is physically installed"
+      ]
+    },
+    {
+      "number": 46,
+      "answer": "Interrupt",
+      "searchTags": ["interrupt", "irq", "isr", "interrupt handler"],
+      "hints": [
+        "A signal that demands a processor's attention right now",
+        "Can come from hardware, like a keyboard press, or from software",
+        "The CPU pauses what it was doing, handles the event, then resumes",
+        "Handled by a special routine looked up in a vector table",
+        "A signal causing the CPU to suspend the current task and run an interrupt service routine (ISR) before returning"
+      ]
+    },
+    {
+      "number": 47,
+      "answer": "UDP",
+      "searchTags": ["udp", "user datagram protocol", "datagram"],
+      "hints": [
+        "A transport protocol that favours speed over guarantees",
+        "Sends messages without first establishing a connection",
+        "Packets may arrive out of order, duplicated, or not at all",
+        "Used by video calls, online games and DNS lookups, where a late packet is worse than a lost one",
+        "User Datagram Protocol — the connectionless, unreliable cousin of TCP"
+      ]
+    },
+    {
+      "number": 48,
+      "answer": "Firewall",
+      "searchTags": ["firewall", "packet filter", "network security"],
+      "hints": [
+        "A gatekeeper for network traffic",
+        "Inspects traffic and decides whether to allow or block it",
+        "Decisions are based on rules covering things like IP addresses, ports and protocols",
+        "Can run as hardware at the edge of a network or as software on a single computer",
+        "A network security system that filters traffic using predefined rules; named after the physical wall that stops a fire spreading between buildings"
+      ]
+    },
+    {
+      "number": 49,
+      "answer": "Load Balancer",
+      "searchTags": ["load balancer", "load balancing", "reverse proxy", "nginx"],
+      "hints": [
+        "Sits in front of a group of servers",
+        "Spreads incoming requests so no single machine is overwhelmed",
+        "Can use strategies like round-robin or least connections",
+        "Often performs health checks and stops sending traffic to servers that fail",
+        "A component that distributes network traffic across multiple backend servers to improve availability and throughput"
+      ]
+    },
+    {
+      "number": 50,
+      "answer": "Neural Network",
+      "searchTags": ["neural network", "neural net", "deep learning", "ann"],
+      "hints": [
+        "A model loosely inspired by biology",
+        "Built from layers of simple units that pass numbers to the next layer",
+        "Connections carry adjustable weights that are tuned during training",
+        "Learns by comparing its output to the right answer and adjusting through backpropagation",
+        "A machine-learning model of interconnected artificial neurons; stacking many layers is called deep learning, as used in image recognition and chatbots"
+      ]
     }
   ]
 }

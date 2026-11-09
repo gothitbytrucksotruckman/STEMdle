@@ -360,6 +360,246 @@
         "Design life is typically 20–40 years; distress modes include rutting, cracking, and potholes",
         "Structural design uses CBR (California Bearing Ratio) of subgrade soil as a key input"
       ]
+    },
+    {
+      "number": 31,
+      "answer": "Column",
+      "searchTags": ["column", "pillar", "post", "compression member"],
+      "hints": [
+        "A vertical element that holds up what is above it",
+        "Carries loads mainly in compression and sends them down toward the foundation",
+        "Slender versions are at risk of buckling",
+        "Typically made of reinforced concrete, steel or timber, and a familiar sight in Greek temples",
+        "A vertical structural member that transmits axial compressive loads from beams, slabs and roofs to the foundation"
+      ]
+    },
+    {
+      "number": 32,
+      "answer": "Cantilever",
+      "searchTags": ["cantilever", "overhang", "fixed end"],
+      "hints": [
+        "A structure that appears to defy gravity by hanging in the air",
+        "Supported at only one end, the other end stays free",
+        "Balconies, diving boards and some bridge arms use this principle",
+        "Experiences its maximum bending moment and shear at the fixed support",
+        "A beam or slab rigidly fixed at one end and unsupported at the other, projecting horizontally"
+      ]
+    },
+    {
+      "number": 33,
+      "answer": "Slab",
+      "searchTags": ["slab", "floor slab", "concrete slab", "ground slab"],
+      "hints": [
+        "A broad flat element of many buildings",
+        "Thin relative to its length and width, it forms floors and roofs",
+        "One-way and two-way types depend on how loads are spread to the supports",
+        "Can be cast on the ground or suspended on beams, and is often reinforced with a mesh of rebar",
+        "A flat, horizontal structural plate of reinforced concrete that forms a floor, ceiling or roof"
+      ]
+    },
+    {
+      "number": 34,
+      "answer": "Shear Wall",
+      "searchTags": ["shear wall", "structural wall", "bracing", "lateral load"],
+      "hints": [
+        "A vertical element that keeps buildings from swaying",
+        "Resists forces that push a building sideways",
+        "Very important in earthquake- and wind-prone regions",
+        "Often built around lift shafts or stairwells, using reinforced concrete or masonry",
+        "A structural wall designed to resist lateral loads from wind and earthquakes in its own plane"
+      ]
+    },
+    {
+      "number": 35,
+      "answer": "Dead Load",
+      "searchTags": ["dead load", "permanent load", "self-weight", "self weight"],
+      "hints": [
+        "A type of force that is always present in a structure",
+        "Does not change over the life of the building",
+        "Includes the weight of the structure itself — beams, floors, walls and roofing",
+        "Calculated using material densities, and contrasted with the loads from occupants and furniture",
+        "The permanent, static load from a structure's own weight and fixed fittings; the counterpart of live load"
+      ]
+    },
+    {
+      "number": 36,
+      "answer": "Live Load",
+      "searchTags": ["live load", "imposed load", "occupancy load", "variable load"],
+      "hints": [
+        "A type of force that changes from moment to moment",
+        "Comes from the use and occupation of a building",
+        "Includes people, furniture, vehicles and movable equipment",
+        "Building codes specify minimum values by occupancy, with higher values for libraries than homes",
+        "The temporary or movable load a structure supports during use — occupants, furnishings, stored goods; the opposite of dead load"
+      ]
+    },
+    {
+      "number": 37,
+      "answer": "Seismic Design",
+      "searchTags": ["seismic design", "earthquake engineering", "earthquake design", "seismic", "earthquake"],
+      "hints": [
+        "Engineering for a force that arrives without warning",
+        "Aims to prevent collapse and protect lives when the ground shakes",
+        "Uses base isolators, dampers and ductile detailing to absorb energy",
+        "Codes define design ground motions based on local fault activity and soil conditions",
+        "The practice of designing structures to withstand earthquake ground motion, relying on ductility, energy dissipation and lateral-load-resisting systems"
+      ]
+    },
+    {
+      "number": 38,
+      "answer": "Expansion Joint",
+      "searchTags": ["expansion joint", "movement joint", "bridge joint", "thermal expansion"],
+      "hints": [
+        "A deliberate gap in a structure",
+        "Lets parts of a structure move relative to each other without damage",
+        "Seen as gaps in bridge decks, pavements and railway tracks",
+        "Accommodates changes in temperature, shrinkage and vibration, and is often sealed with flexible material",
+        "A flexible break between sections of a structure that absorbs thermal expansion and contraction, preventing cracking and buckling"
+      ]
+    },
+    {
+      "number": 39,
+      "answer": "Cement",
+      "searchTags": ["cement", "portland cement", "binder"],
+      "hints": [
+        "A grey powder that is the active ingredient in a ubiquitous material",
+        "Reacts with water in an exothermic process called hydration",
+        "Made by heating limestone and clay in a kiln at around 1450 °C",
+        "Mixed with sand and gravel to make mortar or concrete",
+        "The fine binding powder, most commonly Portland, that hardens when mixed with water and holds aggregate together in concrete"
+      ]
+    },
+    {
+      "number": 40,
+      "answer": "Aggregate",
+      "searchTags": ["aggregate", "gravel", "crushed stone", "sand"],
+      "hints": [
+        "Makes up the bulk of the volume of a common building material",
+        "Granular material that fills most of the mix",
+        "Sizes range from fine sand to coarse stones around 20 mm",
+        "Its strength, shape and grading affect the strength and workability of concrete",
+        "Inert granular materials like sand, gravel and crushed stone mixed with cement and water to form concrete"
+      ]
+    },
+    {
+      "number": 41,
+      "answer": "Water-Cement Ratio",
+      "searchTags": ["water-cement ratio", "water cement ratio", "w/c ratio", "wc ratio"],
+      "hints": [
+        "A single number that largely determines how strong a mix will be",
+        "Compares the weight of two ingredients",
+        "Lower values give stronger, more durable results, but are harder to work with",
+        "Typical values range from about 0.4 to 0.6, and plasticisers help keep mixes workable when it is low",
+        "The ratio of the mass of water to the mass of cement in a concrete mix; abbreviated w/c"
+      ]
+    },
+    {
+      "number": 42,
+      "answer": "Curing",
+      "searchTags": ["curing", "concrete curing", "hydration", "moist curing"],
+      "hints": [
+        "Something done after the pour that is easy to neglect",
+        "Keeping fresh concrete moist and warm so it can gain strength",
+        "Typically lasts at least 7 days, with 28 days the standard test age",
+        "Methods include ponding, wet burlap, plastic sheeting and spray-on compounds; skipping it leads to surface cracking",
+        "The process of maintaining moisture and temperature in newly placed concrete so cement hydration can continue"
+      ]
+    },
+    {
+      "number": 43,
+      "answer": "Asphalt",
+      "searchTags": ["asphalt", "bitumen", "tarmac", "blacktop"],
+      "hints": [
+        "A material that you drive on every day",
+        "A mixture of mineral particles and a sticky black binder",
+        "Typically laid hot and rolled before it cools",
+        "Flexible and recyclable; used for roads, car parks and airport runways, also known as blacktop",
+        "A composite of aggregate and bitumen used for paving roads; sometimes called tarmac"
+      ]
+    },
+    {
+      "number": 44,
+      "answer": "Liquefaction",
+      "searchTags": ["liquefaction", "soil liquefaction", "quicksand"],
+      "hints": [
+        "A hazard in which the ground loses its ability to support what sits on it",
+        "Triggered by shaking, typically from earthquakes",
+        "Affects loose, saturated sandy soils where water pressure builds up",
+        "Buildings have tilted or sunk because of it, as in Niigata (1964) and Christchurch (2011)",
+        "Loss of soil strength when excess pore water pressure equals confining stress, so saturated soil temporarily behaves as a liquid"
+      ]
+    },
+    {
+      "number": 45,
+      "answer": "Consolidation",
+      "searchTags": ["consolidation", "soil consolidation", "primary consolidation", "oedometer"],
+      "hints": [
+        "A slow process that can take years",
+        "Occurs in clay soils beneath new loads",
+        "Water is gradually squeezed out of the pores, reducing the soil's volume",
+        "Tested in an oedometer, and described by Terzaghi's one-dimensional theory",
+        "Time-dependent reduction in volume of saturated soil as pore water drains under sustained load, causing settlement"
+      ]
+    },
+    {
+      "number": 46,
+      "answer": "Atterberg Limits",
+      "searchTags": ["atterberg limits", "atterberg", "liquid limit", "plastic limit", "plasticity"],
+      "hints": [
+        "Simple laboratory tests used to classify soils",
+        "Mostly for fine-grained soils such as clay and silt",
+        "Tell you how a soil's behaviour changes as its water content increases",
+        "Define the water content at which soil moves between solid, plastic and liquid states",
+        "The liquid limit, plastic limit and shrinkage limit, named after the Swedish scientist Albert Atterberg"
+      ]
+    },
+    {
+      "number": 47,
+      "answer": "Dam",
+      "searchTags": ["dam", "reservoir", "embankment dam", "gravity dam", "arch dam"],
+      "hints": [
+        "A huge structure that changes the landscape upstream",
+        "Holds back a body of water and controls its release",
+        "Types include gravity, arch and embankment; the Hoover is a famous example",
+        "Used for flood control, irrigation, power generation and drinking water supply",
+        "A barrier built across a river or stream to store water in a reservoir; Hoover and Three Gorges are famous examples"
+      ]
+    },
+    {
+      "number": 48,
+      "answer": "Culvert",
+      "searchTags": ["culvert", "drainage pipe", "box culvert", "road crossing"],
+      "hints": [
+        "A small structure that you probably drive over without noticing",
+        "Lets water pass beneath a road, railway or embankment",
+        "Often a pipe or a box made of concrete, steel or plastic",
+        "Undersized ones clog with debris and cause flooding; designers also provide for fish passage",
+        "A tunnel-like conduit that carries a stream or drainage flow under a road or other obstruction"
+      ]
+    },
+    {
+      "number": 49,
+      "answer": "Wastewater Treatment",
+      "searchTags": ["wastewater treatment", "sewage treatment", "sewage", "effluent", "wwtp"],
+      "hints": [
+        "A multi-stage process that protects rivers and public health",
+        "Cleans used water from homes and industry before it is released back into the environment",
+        "Screens and settling tanks remove solids first; bacteria then digest organic matter",
+        "Stages are referred to as primary, secondary and tertiary, and the last may include disinfection with chlorine or UV",
+        "The process of removing contaminants from sewage and industrial effluent so the water can be safely discharged or reused"
+      ]
+    },
+    {
+      "number": 50,
+      "answer": "Suspension Bridge",
+      "searchTags": ["suspension bridge", "cable bridge", "golden gate", "bridge"],
+      "hints": [
+        "A bridge type that can span very long distances",
+        "Its deck hangs from vertical hangers attached to massive overhead cables",
+        "The main cables are draped over tall towers and anchored firmly at both ends",
+        "The Golden Gate Bridge and the Akashi Kaikyō Bridge are famous examples",
+        "A bridge in which the deck is hung from cables suspended between towers, with the cables carrying the load in tension"
+      ]
     }
   ]
 }

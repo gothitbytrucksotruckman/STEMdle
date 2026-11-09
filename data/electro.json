@@ -360,6 +360,246 @@
         "Industrial motors run on it because it produces a rotating magnetic field naturally",
         "The grid you see on power lines is almost always this; your home splits off just one or two phases"
       ]
+    },
+    {
+      "number": 31,
+      "answer": "Current",
+      "searchTags": ["current", "amperes", "amps", "ampere"],
+      "hints": [
+        "A flow measured in a unit named after a French physicist",
+        "Moves through a conductor when a voltage is applied",
+        "Measured by placing an ammeter in series with the circuit",
+        "Its unit is the ampere, and Ohm's law says it equals voltage divided by resistance",
+        "The rate of flow of electric charge past a point, measured in amperes, symbol I"
+      ]
+    },
+    {
+      "number": 32,
+      "answer": "Alternating Current",
+      "searchTags": ["alternating current", "ac", "mains", "ac power"],
+      "hints": [
+        "The form of electricity that comes out of your wall socket",
+        "Its direction reverses back and forth many times per second",
+        "Typically 50 or 60 hertz, depending on the country",
+        "Dominates power grids because transformers can easily step its voltage up and down",
+        "AC: electric charge flow that periodically reverses direction, usually following a sine wave, as opposed to DC"
+      ]
+    },
+    {
+      "number": 33,
+      "answer": "Faraday's Law",
+      "searchTags": ["faraday's law", "faradays law", "electromagnetic induction", "induction", "lenz"],
+      "hints": [
+        "A discovery made in the 1830s that made modern electricity generation possible",
+        "Connects magnetism and electricity",
+        "A changing magnetic field passing through a loop of wire creates a voltage",
+        "The induced voltage depends on the rate of change of magnetic flux, and its polarity is described by Lenz's law",
+        "Faraday's law of induction: emf = −N dΦ/dt; the principle behind generators and transformers"
+      ]
+    },
+    {
+      "number": 34,
+      "answer": "Thevenin's Theorem",
+      "searchTags": ["thevenin's theorem", "thevenins theorem", "thevenin", "equivalent circuit", "thevenin equivalent"],
+      "hints": [
+        "A circuit-analysis shortcut taught in every electronics course",
+        "Lets you replace a complicated network with something much simpler",
+        "Seen from two terminals, the whole network behaves like one source plus one resistor",
+        "Finding it involves the open-circuit voltage and the resistance with sources turned off",
+        "Any linear two-terminal network can be replaced by a single voltage source in series with a single resistor; named after French engineer Léon Thévenin"
+      ]
+    },
+    {
+      "number": 35,
+      "answer": "Semiconductor",
+      "searchTags": ["semiconductor", "silicon", "doping", "germanium"],
+      "hints": [
+        "A class of material that sits between two electrical extremes",
+        "Neither a good conductor nor a good insulator",
+        "Its conductivity can be precisely controlled by adding tiny amounts of impurities",
+        "Silicon is the most famous example, forming the basis of chips and solar panels",
+        "A material whose conductivity lies between a conductor and an insulator, tuned by doping; the foundation of diodes, transistors and ICs"
+      ]
+    },
+    {
+      "number": 36,
+      "answer": "MOSFET",
+      "searchTags": ["mosfet", "fet", "field effect transistor", "metal oxide semiconductor"],
+      "hints": [
+        "Probably the most manufactured device in history",
+        "A type of electronic switch controlled by a voltage rather than a current",
+        "Has three terminals called gate, drain and source",
+        "Billions are packed into a modern processor, and power versions switch motors and supplies",
+        "Metal-Oxide-Semiconductor Field-Effect Transistor: a voltage-controlled transistor whose insulated gate modulates the channel conductivity"
+      ]
+    },
+    {
+      "number": 37,
+      "answer": "LED",
+      "searchTags": ["led", "light emitting diode", "light-emitting diode"],
+      "hints": [
+        "Replaced the incandescent bulb in most homes",
+        "Converts electrical energy directly into photons",
+        "A semiconductor junction that glows when current passes through it in the forward direction",
+        "Colour depends on the material's band gap; efficient and long-lasting, but it needs a resistor to limit current",
+        "Light-Emitting Diode: a diode that emits light when forward biased"
+      ]
+    },
+    {
+      "number": 38,
+      "answer": "Solar Cell",
+      "searchTags": ["solar cell", "photovoltaic", "pv", "solar panel"],
+      "hints": [
+        "A device that harvests energy from the sky",
+        "Based on a semiconductor junction, usually silicon",
+        "Photons knock electrons loose, creating a voltage across the junction",
+        "Many are connected in series and parallel to form panels, producing DC that an inverter converts to AC",
+        "A photovoltaic device that converts light directly into electricity via the photovoltaic effect"
+      ]
+    },
+    {
+      "number": 39,
+      "answer": "Logic Gate",
+      "searchTags": ["logic gate", "and gate", "or gate", "not gate", "nand", "nor", "xor"],
+      "hints": [
+        "A fundamental building block of digital circuits",
+        "Takes one or more binary inputs and produces a single binary output",
+        "AND, OR, NOT, NAND and XOR are the common types",
+        "Built from transistors, billions of them make up a processor's decision-making",
+        "An electronic circuit implementing a Boolean function, mapping inputs of 0 and 1 to an output according to a truth table"
+      ]
+    },
+    {
+      "number": 40,
+      "answer": "Flip-Flop",
+      "searchTags": ["flip-flop", "flip flop", "latch", "sr latch", "d flip-flop", "jk flip-flop"],
+      "hints": [
+        "A circuit that gives electronics a form of memory",
+        "Has two stable states and can hold one bit of information",
+        "Changes state on a clock edge or when told to via its inputs",
+        "SR, D, JK and T are the common types; chained together they form registers and counters",
+        "A bistable sequential logic circuit that stores one bit, used in registers, counters and memory"
+      ]
+    },
+    {
+      "number": 41,
+      "answer": "Low-Pass Filter",
+      "searchTags": ["low-pass filter", "low pass filter", "lpf", "rc filter", "filter"],
+      "hints": [
+        "Part of almost every audio and sensor circuit",
+        "Lets some frequencies through and blocks others",
+        "Slow variations get through, while fast ones are attenuated",
+        "The simplest form is a resistor and capacitor, with a cutoff frequency of 1/(2πRC)",
+        "A filter that passes signals below a cutoff frequency and attenuates those above it, used to remove high-frequency noise"
+      ]
+    },
+    {
+      "number": 42,
+      "answer": "Feedback",
+      "searchTags": ["feedback", "negative feedback", "positive feedback", "closed loop"],
+      "hints": [
+        "A concept that keeps amplifiers, thermostats and cruise control stable",
+        "Part of a system's output is routed back to its input",
+        "The negative kind reduces gain but improves stability and linearity",
+        "The positive kind can cause oscillation, and is used in oscillators and Schmitt triggers",
+        "The return of a portion of an output signal to the input, the basis of control systems and op-amp circuits"
+      ]
+    },
+    {
+      "number": 43,
+      "answer": "Wheatstone Bridge",
+      "searchTags": ["wheatstone bridge", "wheatstone", "bridge circuit", "strain gauge"],
+      "hints": [
+        "A classic circuit from the 1800s still used in modern sensors",
+        "Four resistors arranged in a diamond with a meter across the middle",
+        "When balanced, no current flows through the meter",
+        "Measures tiny resistance changes, so strain gauges and thermistors often sit inside one",
+        "A circuit of two parallel voltage dividers used to measure an unknown resistance precisely; named after Charles Wheatstone, though invented by Samuel Hunter Christie"
+      ]
+    },
+    {
+      "number": 44,
+      "answer": "Electric Motor",
+      "searchTags": ["electric motor", "motor", "dc motor", "ac motor", "induction motor"],
+      "hints": [
+        "Converts one form of energy into another using magnetism",
+        "Electrical input in, rotation out",
+        "A coil in a magnetic field experiences a force that creates torque",
+        "Found in fans, EVs and washing machines; types include brushed DC, brushless DC and induction",
+        "A machine that converts electrical energy into mechanical rotation via the interaction of magnetic fields and current-carrying conductors"
+      ]
+    },
+    {
+      "number": 45,
+      "answer": "Generator",
+      "searchTags": ["generator", "alternator", "dynamo"],
+      "hints": [
+        "The reverse of a motor",
+        "Turns mechanical movement into electrical output",
+        "Spinning a magnet inside coils of wire induces a voltage in them",
+        "Driven by a turbine at power stations, or a petrol engine in backup units",
+        "A machine that converts mechanical energy into electrical energy via electromagnetic induction (Faraday's law)"
+      ]
+    },
+    {
+      "number": 46,
+      "answer": "Inverter",
+      "searchTags": ["inverter", "dc to ac", "power inverter", "vfd"],
+      "hints": [
+        "A power electronics device that changes the type of electricity",
+        "Takes in a steady supply and outputs a waveform that swings back and forth",
+        "Solar installations and UPS units can't work without one",
+        "Uses fast-switching transistors, often with PWM, to build a sine wave",
+        "A circuit that converts DC into AC, used in solar systems, UPSs and variable-frequency motor drives"
+      ]
+    },
+    {
+      "number": 47,
+      "answer": "Circuit Breaker",
+      "searchTags": ["circuit breaker", "breaker", "mcb", "rcd"],
+      "hints": [
+        "A safety device you'll find in a distribution board",
+        "Cuts power automatically when something goes wrong",
+        "Unlike a fuse, it can be reset instead of replaced",
+        "Trips by thermal or magnetic action when overloads and short circuits occur",
+        "A resettable protective switch that automatically interrupts current flow when an overload or fault is detected"
+      ]
+    },
+    {
+      "number": 48,
+      "answer": "Transmission Line",
+      "searchTags": ["transmission line", "power line", "overhead line", "coaxial", "power grid"],
+      "hints": [
+        "Carries energy or signals over a distance",
+        "Runs from power stations to substations, held high on pylons",
+        "Operated at very high voltages — hundreds of kilovolts — to reduce losses",
+        "Losses scale with I²R, which is why stepping up voltage with transformers lowers current for the same power",
+        "A conductor system that carries electrical power or signals over long distances; at high frequencies its characteristic impedance matters"
+      ]
+    },
+    {
+      "number": 49,
+      "answer": "Battery",
+      "searchTags": ["battery", "cell", "lithium-ion", "li-ion", "accumulator"],
+      "hints": [
+        "A portable source of stored energy",
+        "Converts chemical energy into electrical energy",
+        "Contains an anode, a cathode and an electrolyte",
+        "Types include alkaline, lead-acid and lithium-ion; rechargeable ones reverse the chemistry when charged",
+        "One or more electrochemical cells that store chemical energy and supply it as DC electricity, rated in volts and amp-hours"
+      ]
+    },
+    {
+      "number": 50,
+      "answer": "Soldering",
+      "searchTags": ["soldering", "solder", "solder iron", "soldering iron"],
+      "hints": [
+        "A hands-on skill every electronics hobbyist learns",
+        "Joins metal parts using a different metal that melts at a lower temperature",
+        "Done with a hot tool at around 300 °C, often with a flux to clean the surfaces",
+        "Older recipes were tin-lead; modern lead-free ones are mostly tin, silver and copper",
+        "Joining components to a PCB by melting a filler metal (solder) around the joint to form an electrical and mechanical bond"
+      ]
     }
   ]
 }

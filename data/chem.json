@@ -360,6 +360,246 @@
         "Lower pressure drop than tray columns — preferred for vacuum distillation",
         "Performance described by HETP (Height Equivalent to a Theoretical Plate)"
       ]
+    },
+    {
+      "number": 31,
+      "answer": "Enthalpy",
+      "searchTags": ["enthalpy", "heat content", "delta h", "reaction enthalpy", "heat of reaction"],
+      "hints": [
+        "A thermodynamic quantity used heavily in heat-balance calculations",
+        "Combines internal energy with the product of pressure and volume",
+        "At constant pressure, its change equals the heat absorbed or released",
+        "A negative change indicates an exothermic process; symbol H",
+        "State function H = U + PV; ΔH measures the heat of reaction at constant pressure"
+      ]
+    },
+    {
+      "number": 32,
+      "answer": "Activation Energy",
+      "searchTags": ["activation energy", "ea", "arrhenius", "energy barrier"],
+      "hints": [
+        "A barrier that every reaction must overcome",
+        "The minimum energy colliding molecules need for a reaction to occur",
+        "Lowering it is exactly how catalysts work",
+        "Appears in the Arrhenius equation, k = A·e^(−Ea/RT)",
+        "The minimum energy that reactants must have for a chemical reaction to proceed, denoted Ea"
+      ]
+    },
+    {
+      "number": 33,
+      "answer": "Ideal Gas Law",
+      "searchTags": ["ideal gas law", "ideal gas", "pv=nrt", "gas law", "ideal gas equation"],
+      "hints": [
+        "A simple equation of state taught in first-year courses",
+        "Relates pressure, volume, temperature and amount of gas",
+        "Works best at low pressure and high temperature, where molecular interactions are negligible",
+        "Combines Boyle's, Charles's and Avogadro's laws into one expression",
+        "PV = nRT: the equation of state for a hypothetical gas of non-interacting point particles"
+      ]
+    },
+    {
+      "number": 34,
+      "answer": "Vapour Pressure",
+      "searchTags": ["vapour pressure", "vapor pressure", "saturation pressure", "antoine equation"],
+      "hints": [
+        "A temperature-dependent property of every liquid and solid",
+        "Rises steeply with temperature and is often modelled with the Antoine equation",
+        "When it equals the surrounding pressure, the liquid boils",
+        "High values mean a substance is volatile — acetone has a high one, glycerol a low one",
+        "The pressure exerted by a vapour in equilibrium with its liquid or solid phase at a given temperature"
+      ]
+    },
+    {
+      "number": 35,
+      "answer": "Raoult's Law",
+      "searchTags": ["raoult's law", "raoults law", "raoult", "ideal solution"],
+      "hints": [
+        "A rule for predicting how a mixture behaves",
+        "Applies to ideal liquid solutions",
+        "Relates the vapour pressure of each component to its mole fraction in the liquid",
+        "Deviations from it explain why some mixtures can't be separated by simple distillation",
+        "The partial vapour pressure of a component equals its mole fraction in the liquid times its pure-component vapour pressure: Pᵢ = xᵢPᵢ*"
+      ]
+    },
+    {
+      "number": 36,
+      "answer": "Azeotrope",
+      "searchTags": ["azeotrope", "azeotropic", "constant boiling mixture", "ethanol water"],
+      "hints": [
+        "A mixture that frustrates engineers who want a clean split",
+        "Boils at a fixed composition, so the vapour has the same composition as the liquid",
+        "Ethanol and water form one at about 95.6% ethanol, which is why plain distillation can't make pure alcohol",
+        "Breaking it requires tricks like adding an entrainer, pressure-swing distillation or molecular sieves",
+        "A liquid mixture whose vapour has the same composition as the liquid at a given pressure, so it cannot be separated by ordinary distillation"
+      ]
+    },
+    {
+      "number": 37,
+      "answer": "Reflux",
+      "searchTags": ["reflux", "reflux ratio", "reflux condenser"],
+      "hints": [
+        "A technique that improves the purity of a separation",
+        "Part of the condensed overhead product is sent back to where it came from",
+        "Controlled by a ratio, a key operating knob of a column",
+        "A higher ratio gives a better separation but costs more energy in the reboiler",
+        "Liquid condensate returned to the top of a distillation column (or flask) to improve separation; the reflux ratio compares the returned amount with the amount withdrawn"
+      ]
+    },
+    {
+      "number": 38,
+      "answer": "Adsorption",
+      "searchTags": ["adsorption", "adsorbent", "activated carbon", "surface adhesion"],
+      "hints": [
+        "A surface phenomenon, easily mixed up with a similar-sounding process",
+        "Molecules stick to the exterior of a solid rather than dissolving into it",
+        "Activated carbon and zeolites are popular materials for it thanks to their huge surface areas",
+        "Used in gas masks, water purification, and for drying air with silica gel",
+        "The accumulation of molecules of a gas or liquid on the surface of a solid; distinct from absorption, where the substance is taken up into the bulk"
+      ]
+    },
+    {
+      "number": 39,
+      "answer": "CSTR",
+      "searchTags": ["cstr", "continuous stirred tank reactor", "stirred tank", "mixed flow reactor", "cstr reactor"],
+      "hints": [
+        "A workhorse reactor configuration, found in many plants",
+        "Feed enters and product leaves continuously",
+        "An impeller keeps the contents well mixed, so conditions are uniform throughout",
+        "The output composition equals the composition inside the vessel",
+        "Continuous Stirred-Tank Reactor: a perfectly mixed vessel with steady inflow and outflow, modelled with a single mass balance"
+      ]
+    },
+    {
+      "number": 40,
+      "answer": "Plug Flow Reactor",
+      "searchTags": ["plug flow reactor", "pfr", "tubular reactor", "plug flow"],
+      "hints": [
+        "A reactor design based on an idealised flow pattern",
+        "Usually a long pipe or tube",
+        "Fluid moves like a series of discs, with no mixing along the flow direction",
+        "Concentration changes continuously from inlet to outlet, which makes it more efficient than a mixed vessel for most reaction orders",
+        "A tubular reactor (PFR) in which fluid elements flow in an orderly fashion with no axial mixing"
+      ]
+    },
+    {
+      "number": 41,
+      "answer": "Residence Time",
+      "searchTags": ["residence time", "space time", "holdup time", "retention time"],
+      "hints": [
+        "A quantity every flow-through vessel has",
+        "How long a typical molecule spends in the equipment",
+        "Found by dividing volume by volumetric flow rate",
+        "Too short and reactions don't complete; too long and you waste volume or cause side reactions",
+        "The average time a fluid element stays in a vessel: τ = V/Q"
+      ]
+    },
+    {
+      "number": 42,
+      "answer": "Conversion",
+      "searchTags": ["conversion", "fractional conversion", "xa", "extent of reaction"],
+      "hints": [
+        "A figure of merit for how far a reaction has gone",
+        "Compares the amount of a reactant consumed with the amount fed in",
+        "Expressed as a fraction or a percentage, usually written X",
+        "A value of 100% means the limiting reactant is entirely used up; it differs from yield and selectivity",
+        "The fraction of a reactant that has been consumed by reaction: X = (moles in − moles out) / moles in"
+      ]
+    },
+    {
+      "number": 43,
+      "answer": "Diffusion",
+      "searchTags": ["diffusion", "fick's law", "mass transfer", "molecular diffusion"],
+      "hints": [
+        "A transport process that needs no stirring or flow",
+        "Particles spread from regions of high concentration to low concentration",
+        "Described by Fick's laws, with a coefficient that depends on temperature and medium",
+        "A drop of dye spreading through still water is the classic example, and it is much slower in liquids than in gases",
+        "Net movement of species caused by random molecular motion down a concentration gradient"
+      ]
+    },
+    {
+      "number": 44,
+      "answer": "Reverse Osmosis",
+      "searchTags": ["reverse osmosis", "ro", "desalination", "osmosis"],
+      "hints": [
+        "A technology that supplies drinking water to dry regions",
+        "Pushes a liquid against its natural direction of flow through a semipermeable barrier",
+        "Pressure must exceed the osmotic pressure of the feed — often 55–80 bar for seawater",
+        "Removes salts and small contaminants, and is used in desalination plants and home water purifiers",
+        "A membrane process in which applied pressure forces solvent through a semipermeable membrane from the concentrated to the dilute side"
+      ]
+    },
+    {
+      "number": 45,
+      "answer": "Haber Process",
+      "searchTags": ["haber process", "haber-bosch", "haber bosch", "ammonia synthesis", "ammonia"],
+      "hints": [
+        "An industrial reaction that feeds roughly half the world's population",
+        "Combines two gases over an iron catalyst at high temperature and pressure",
+        "Produces a compound for fertiliser, using nitrogen from the air",
+        "Typically about 450 °C and 200 bar, a compromise between yield and rate",
+        "The industrial synthesis of ammonia from nitrogen and hydrogen (N₂ + 3H₂ ⇌ 2NH₃), developed by Fritz Haber and Carl Bosch"
+      ]
+    },
+    {
+      "number": 46,
+      "answer": "Cracking",
+      "searchTags": ["cracking", "catalytic cracking", "fcc", "steam cracking", "thermal cracking"],
+      "hints": [
+        "A refinery operation that makes big molecules smaller",
+        "Breaks long hydrocarbon chains into shorter, more valuable ones",
+        "Can be driven by heat, steam or a zeolite catalyst",
+        "Converts heavy oil into petrol, diesel and alkenes like ethylene",
+        "The process of breaking large hydrocarbon molecules into smaller ones, via thermal, catalytic (FCC) or steam methods"
+      ]
+    },
+    {
+      "number": 47,
+      "answer": "Fermentation",
+      "searchTags": ["fermentation", "ferment", "bioreactor", "yeast"],
+      "hints": [
+        "A biological process people have used for thousands of years",
+        "Microorganisms convert sugars into other compounds, often without oxygen",
+        "Produces bread, beer and yoghurt, as well as industrial chemicals and drugs",
+        "Carried out at scale in bioreactors, with temperature, pH and sterility strictly controlled",
+        "A metabolic process in which microorganisms such as yeast convert sugars to ethanol, acids or gases"
+      ]
+    },
+    {
+      "number": 48,
+      "answer": "Electrolysis",
+      "searchTags": ["electrolysis", "electrolytic cell", "electrolyser", "electrolyzer", "chlor-alkali"],
+      "hints": [
+        "Chemistry driven by something external instead of happening spontaneously",
+        "Uses electric current to force a reaction that would not otherwise happen",
+        "Splits water into hydrogen and oxygen, which is why it is central to green hydrogen",
+        "Takes place at an anode and a cathode in an electrolyte, and is also used for aluminium production and chlorine",
+        "Using direct electric current to drive a non-spontaneous chemical reaction in an electrochemical cell"
+      ]
+    },
+    {
+      "number": 49,
+      "answer": "HAZOP",
+      "searchTags": ["hazop", "hazard and operability", "hazard and operability study", "process safety"],
+      "hints": [
+        "A structured safety review done before a plant is built or modified",
+        "A multidisciplinary team examines every part of the design, line by line",
+        "Uses guide words such as 'no', 'more', 'less' and 'reverse' applied to process parameters",
+        "Looks for deviations from design intent, their causes, consequences and safeguards",
+        "Hazard and Operability Study: a systematic technique for identifying hazards by applying guide words to P&IDs"
+      ]
+    },
+    {
+      "number": 50,
+      "answer": "P&ID",
+      "searchTags": ["p&id", "pid", "piping and instrumentation diagram", "piping and instrumentation", "p and id"],
+      "hints": [
+        "A document that process engineers, operators and maintenance staff all rely on",
+        "A schematic that shows how a plant's equipment is connected",
+        "Includes pipes, valves, vessels, pumps and control loops, each with standard symbols and tag numbers",
+        "Unlike a simple flow sheet, it shows instrumentation and control details",
+        "Piping and Instrumentation Diagram: a detailed engineering drawing of a process's piping, equipment and control instruments"
+      ]
     }
   ]
 }

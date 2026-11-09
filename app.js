@@ -19,6 +19,9 @@ let state = null;
 
 const $ = (id) => document.getElementById(id);
 
+// en-CA formats as YYYY-MM-DD in local time (toISOString would give UTC)
+const localDate = (d = new Date()) => d.toLocaleDateString('en-CA');
+
 // ponytail: inline SVG icon helper — uses the #i-* sprite defs in index.html
 const icon = (name) => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 
@@ -30,7 +33,7 @@ function setUrlParam(key, value) {
   } else {
     url.searchParams.delete(key);
   }
-  window.history.pushState({}, '', url);
+  if (url.href !== window.location.href) window.history.pushState({}, '', url);
 }
 
 function getUrlParam(key) {
@@ -45,7 +48,7 @@ function showView(id) {
 
   // Clear URL params if going back to landing
   if (id === 'view-landing') {
-    window.history.pushState({}, '', window.location.pathname);
+    if (window.location.search) window.history.pushState({}, '', window.location.pathname);
   } else if (id === 'view-stats') {
     setUrlParam('view', 'stats');
   }
@@ -64,7 +67,7 @@ function getLocalStats() {
 
 function saveLocalResult(sectionId, guesses, solved) {
   const results = getLocalStats();
-  const date = new Date().toISOString().slice(0, 10);
+  const date = localDate();
 
   // Replay prevention isn't strictly enforced in static mode to allow replaying,
   // but we can just save all results for stats.
@@ -77,11 +80,37 @@ function toggleSidebar() {
   $('sidebar').classList.toggle('hidden', !open);
   $('sidebar-overlay').classList.toggle('hidden', !open);
   $('menu-btn').innerHTML = open ? icon('x') : icon('menu');
+  $('menu-btn').setAttribute('aria-expanded', open);
+  $('menu-btn').setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  (open ? $('sidebar-stats-btn') : $('menu-btn')).focus();
 }
 
 $('menu-btn').addEventListener('click', toggleSidebar);
 $('sidebar-overlay').addEventListener('click', toggleSidebar);
 $('sidebar-stats-btn').addEventListener('click', () => { toggleSidebar(); showStats(); });
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !$('sidebar').classList.contains('hidden')) toggleSidebar();
+});
+
+// --- Theme (system default, manual override persisted) ---
+const isDark = () =>
+  document.documentElement.dataset.theme
+    ? document.documentElement.dataset.theme === 'dark'
+    : matchMedia('(prefers-color-scheme: dark)').matches;
+
+function syncThemeBtn() {
+  const dark = isDark();
+  $('theme-btn').innerHTML = `${icon(dark ? 'sun' : 'moon')}<span>${dark ? 'Light' : 'Dark'} mode</span>`;
+}
+
+$('theme-btn').addEventListener('click', () => {
+  const next = isDark() ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem('stemdle_theme', next); } catch (e) {}
+  syncThemeBtn();
+});
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', syncThemeBtn);
+syncThemeBtn();
 $('stats-back-btn').addEventListener('click', () => showView('view-landing'));
 
 function showStats() {
@@ -98,9 +127,8 @@ function showStats() {
   // Streak logic
   const solvedDates = new Set(solvedRows.map((r) => r.date));
   let streak = 0, longest = 0, cur = 0;
-  const today = new Date().toISOString().slice(0, 10);
-  let d = new Date(today);
-  while (solvedDates.has(d.toISOString().slice(0, 10))) {
+  let d = new Date();
+  while (solvedDates.has(localDate(d))) {
     streak++;
     d.setDate(d.getDate() - 1);
   }
@@ -109,9 +137,7 @@ function showStats() {
   sorted.forEach((date, i) => {
     if (i === 0) { cur = 1; }
     else {
-      const prev = new Date(sorted[i - 1]);
-      prev.setDate(prev.getDate() + 1);
-      cur = prev.toISOString().slice(0, 10) === date ? cur + 1 : 1;
+      cur = Date.parse(date) - Date.parse(sorted[i - 1]) === 86400000 ? cur + 1 : 1;
     }
     if (cur > longest) longest = cur;
   });
@@ -140,26 +166,30 @@ function showStats() {
       <div class="stat-box"><div class="stat-val">${longest}</div><div class="stat-label">Longest streak</div></div>
     </div>
     ${Object.keys(perSection).length ? `
-      <h3 style="margin:1.5rem 0 0.75rem">Per section</h3>
-      <table class="stats-table">
-        <thead><tr><th>Section</th><th>Played</th><th>Solved</th><th>Avg</th></tr></thead>
-        <tbody>${Object.entries(perSection).map(([k, v]) =>
-          `<tr><td>${k}</td><td>${v.played}</td><td>${v.solved}</td><td>${v.avgGuesses || '—'}</td></tr>`
-        ).join('')}</tbody>
-      </table>` : ''}
+      <div class="card stats-section">
+        <h2 class="card-title">Per section</h2>
+        <table class="stats-table">
+          <thead><tr><th>Section</th><th>Played</th><th>Solved</th><th>Avg</th></tr></thead>
+          <tbody>${Object.entries(perSection).map(([k, v]) =>
+            `<tr><td>${sections.find((s) => s.id === k)?.label ?? k}</td><td>${v.played}</td><td>${v.solved}</td><td>${v.avgGuesses || '—'}</td></tr>`
+          ).join('')}</tbody>
+        </table>
+      </div>` : ''}
   `;
   showView('view-stats');
 }
 
 // --- Section registry ---
 async function loadSections() {
-  const res = await fetch('/data/sections.json');
+  const res = await fetch('data/sections.json');
   sections = (await res.json()).sections;
   const container = $('section-buttons');
   container.innerHTML = '';
   sections.forEach((s) => {
     const btn = document.createElement('button');
+    btn.className = 'section-card';
     btn.textContent = s.label;
+    btn.insertAdjacentHTML('beforeend', icon('arrow-right'));
     btn.onclick = () => showLevels(s);
     container.appendChild(btn);
   });
@@ -171,7 +201,7 @@ async function loadBank(section) {
     // Fetch all non-merge sections and combine, prefixing each term's number for uniqueness
     const allSections = sections.filter((s) => !s.merge);
     const banks = await Promise.all(
-      allSections.map((s) => fetch(`/data/${s.file}`).then((r) => r.json()))
+      allSections.map((s) => fetch(`data/${s.file}`).then((r) => r.json()))
     );
     // Assign global sequential numbers across the merged pool
     let counter = 1;
@@ -183,7 +213,7 @@ async function loadBank(section) {
       }))
     );
   }
-  const res = await fetch(`/data/${section.file}`);
+  const res = await fetch(`data/${section.file}`);
   return (await res.json()).terms;
 }
 
@@ -195,7 +225,18 @@ async function showLevels(section) {
   $('levels-section-label').textContent = section.label;
 
   const list = $('levels-list');
-  list.innerHTML = '';
+  list.innerHTML = `
+    <div class="level-hero"></div>
+    <h2 class="card-title level-grid-title">All levels</h2>
+    <div class="level-grid"></div>`;
+  const hero = list.querySelector('.level-hero');
+  const grid = list.querySelector('.level-grid');
+
+  const dailyBtn = document.createElement('button');
+  dailyBtn.className = 'level-random-btn';
+  dailyBtn.innerHTML = icon('flame') + " Today's puzzle";
+  dailyBtn.onclick = () => startGame(section, currentBank[dayIndex(currentBank.length)]);
+  hero.appendChild(dailyBtn);
 
   const randomBtn = document.createElement('button');
   randomBtn.className = 'level-random-btn';
@@ -204,14 +245,20 @@ async function showLevels(section) {
     const pick = currentBank[Math.floor(Math.random() * currentBank.length)];
     startGame(section, pick);
   };
-  list.appendChild(randomBtn);
+  hero.appendChild(randomBtn);
 
   [...currentBank].reverse().forEach((term) => {
     const btn = document.createElement('button');
     btn.className = 'level-btn';
-    btn.textContent = term._section ? `#${term.number} (${term._section})` : `#${term.number}`;
+    btn.textContent = `#${term.number}`;
+    if (term._section) {
+      const small = document.createElement('small');
+      small.textContent = term._section;
+      btn.appendChild(small);
+    }
+    btn.setAttribute('aria-label', `Level ${term.number}${term._section ? `, ${term._section}` : ''}`);
     btn.onclick = () => startGame(section, term);
-    list.appendChild(btn);
+    grid.appendChild(btn);
   });
 
   setUrlParam('section', section.id);
@@ -221,7 +268,8 @@ async function showLevels(section) {
 
 // --- Daily puzzle selection ---
 function dayIndex(termCount) {
-  const days = Math.floor((Date.now() - EPOCH) / 86400000);
+  const n = new Date();
+  const days = Math.floor((Date.UTC(n.getFullYear(), n.getMonth(), n.getDate()) - EPOCH) / 86400000);
   return ((days % termCount) + termCount) % termCount;
 }
 
@@ -245,6 +293,7 @@ async function startGame(section, term) {
   $('guess-count').textContent = '0';
   $('search-input').value = '';
   $('search-results').innerHTML = '';
+  $('guess-error').textContent = '';
   $('search-input').disabled = false;
 
   renderHints();
@@ -260,6 +309,7 @@ function renderHints() {
     const li = document.createElement('li');
     if (i < state.hintsShown) {
       li.textContent = currentTerm.hints[i];
+      if (i === state.hintsShown - 1) li.classList.add('new-hint');
     } else {
       li.innerHTML = icon('lock') + ' Locked — Guess to reveal';
       li.classList.add('locked-hint');
@@ -271,6 +321,7 @@ function renderHints() {
 // --- Search ---
 $('search-input').addEventListener('input', (e) => {
   if (state?.solved || state?.givenUp) return;
+  $('guess-error').textContent = '';
   const q = e.target.value.trim().toLowerCase();
   const results = $('search-results');
   results.innerHTML = '';
@@ -284,17 +335,32 @@ $('search-input').addEventListener('input', (e) => {
     .slice(0, 10);
 
   matches.forEach((t) => {
-    const div = document.createElement('div');
-    div.textContent = t.answer;
-    const already = state.guesses.includes(t.answer);
-    if (already) div.classList.add('guessed');
-    if (!already) div.onclick = () => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = t.answer;
+    btn.disabled = state.guesses.includes(t.answer);
+    btn.onclick = () => {
       $('search-input').value = t.answer;
       results.innerHTML = ''; // hide dropdown after selecting
       $('search-input').focus();
     };
-    results.appendChild(div);
+    results.appendChild(btn);
   });
+});
+
+// Arrow keys move between input and results; Esc returns to the input
+$('search-input').addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowDown') {
+    const first = $('search-results').querySelector('button:not(:disabled)');
+    if (first) { e.preventDefault(); first.focus(); }
+  }
+});
+$('search-results').addEventListener('keydown', (e) => {
+  const items = [...$('search-results').querySelectorAll('button:not(:disabled)')];
+  const i = items.indexOf(document.activeElement);
+  if (e.key === 'ArrowDown' && i < items.length - 1) { e.preventDefault(); items[i + 1].focus(); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); (i > 0 ? items[i - 1] : $('search-input')).focus(); }
+  else if (e.key === 'Escape') { $('search-input').focus(); }
 });
 
 // --- Guess handling ---
@@ -304,7 +370,7 @@ $('submit-guess-btn').addEventListener('click', () => {
   // Ensure it's a valid term from the bank
   const isValid = currentBank.some(t => t.answer.toLowerCase() === val.toLowerCase());
   if (!isValid) {
-    alert("Not in word list");
+    $('guess-error').textContent = 'Not in the word list. Pick a term from the suggestions.';
     return;
   }
   // Find the canonical casing
@@ -350,7 +416,7 @@ function submitGuess(answer) {
 function addGuessLog(answer, correct, revealedHint) {
   const li = document.createElement('li');
   if (correct) {
-    li.innerHTML = `<span style="color:var(--accent)">${answer} ${icon('check')}</span>`;
+    li.innerHTML = `<span class="correct">${answer} ${icon('check')}</span>`;
   } else {
     li.innerHTML = `<span class="wrong">${answer} ${icon('xmark')}</span>${
       revealedHint ? `<span class="hint-tag">+ Hint ${state.hintsShown}</span>` : ''
@@ -362,7 +428,12 @@ function addGuessLog(answer, correct, revealedHint) {
 // --- Give up ---
 $('give-up-btn').addEventListener('click', () => {
   if (state.solved || state.givenUp) return;
-  if (!confirm('Give up and reveal the answer?')) return;
+  $('giveup-dialog').returnValue = ''; // Esc keeps the previous value, so clear it
+  $('giveup-dialog').showModal();
+});
+$('giveup-dialog').addEventListener('close', () => {
+  if ($('giveup-dialog').returnValue !== 'confirm') return;
+  if (state.solved || state.givenUp) return;
   state.givenUp = true;
   endRound();
 });
@@ -384,7 +455,7 @@ async function endRound() {
     detail.textContent = `${state.guesses.length} guess${state.guesses.length === 1 ? '' : 'es'}`;
 
     // Set up share payload
-    $('share-btn').style.display = 'inline-block';
+    $('share-btn').classList.remove('hidden');
     $('share-btn').onclick = () => {
       const g = state.guesses.length;
       let grid = '';
@@ -406,7 +477,7 @@ async function endRound() {
     tier.textContent = 'Answer shown';
     tier.classList.add('revealed');
     detail.textContent = `${state.guesses.length} guess${state.guesses.length === 1 ? '' : 'es'} before giving up`;
-    $('share-btn').style.display = 'none'; // don't share give-ups
+    $('share-btn').classList.add('hidden'); // don't share give-ups
   }
 
   $('result-answer').textContent = currentTerm.answer;
